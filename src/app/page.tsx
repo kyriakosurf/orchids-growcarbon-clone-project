@@ -396,9 +396,9 @@ export default function Home() {
                     <div className="flex gap-2">
                        <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em]">Live Data Stream</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                     <div className="flex items-center gap-2">
                        <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                       <span className="text-blue-500 text-[10px] font-bold uppercase tracking-widest underline underline-offset-4 cursor-pointer">Waste Cloud v2.01</span>
+                       <span className="text-blue-500 text-[10px] font-bold uppercase tracking-widest underline underline-offset-4 cursor-pointer">Infrastructure OS v2.01</span>
                     </div>
                  </div>
                  <div className="space-y-6 font-mono text-[12px]">
