@@ -357,39 +357,39 @@ export default function Home() {
           </div>
         </section>
 
-        {/* VERIFICATION & TRUST: WASTE CLOUD */}
-        <section className="rounded-[60px] bg-gradient-to-br from-[#0c0c0c] to-black border border-white/5 p-12 lg:p-24 relative overflow-hidden group">
-           <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 opacity-20 pointer-events-none">
-              <div className="w-[800px] h-[800px] rounded-full border border-white/5 animate-[pulse_10s_ease-in-out_infinite]" />
-           </div>
-           
-           <div className="grid lg:grid-cols-2 gap-24 relative z-10">
-              <div className="space-y-10">
-                 <div className="bg-blue-500/10 text-blue-400 px-5 py-2 rounded-full inline-flex items-center gap-2 border border-blue-500/20">
-                    <ShieldCheck className="w-4 h-4" />
-                    <span className="text-[10px] font-black uppercase tracking-widest">Deep Tech KPIs: Core Technology</span>
-                 </div>
-                 <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter leading-[0.9]">
-                   Immutable <br />
-                   Verification.
-                 </h2>
-                 <p className="text-white/40 text-xl font-medium max-w-lg leading-relaxed">
-                   Trust is powered by our proprietary technology—the backbone of our network. We provide full-spectrum visibility into every ton of organic material as it converts into stabilized soil assets.
-                 </p>
-                 <div className="grid grid-cols-2 gap-x-12 gap-y-6 pt-6">
-                    {[
-                      'Real-time Nutrient Analysis',
-                      'Satellite Carbon Auditing',
-                      'IoT Bio-Hub Mesh',
-                      'Fractional CORC Registry'
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-4 group/item cursor-pointer">
-                         <div className="h-px w-4 bg-green-500/50 group-hover/item:w-8 transition-all" />
-                         <span className="text-xs font-bold text-white/60 uppercase tracking-widest">{item}</span>
-                      </div>
-                    ))}
-                 </div>
-              </div>
+          {/* VERIFICATION & TRUST: ANALYTICS TECHNOLOGY */}
+          <section className="rounded-[60px] bg-gradient-to-br from-[#0c0c0c] to-black border border-white/5 p-12 lg:p-24 relative overflow-hidden group">
+             <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 opacity-20 pointer-events-none">
+                <div className="w-[800px] h-[800px] rounded-full border border-white/5 animate-[pulse_10s_ease-in-out_infinite]" />
+             </div>
+             
+             <div className="grid lg:grid-cols-2 gap-24 relative z-10">
+                <div className="space-y-10">
+                   <div className="bg-blue-500/10 text-blue-400 px-5 py-2 rounded-full inline-flex items-center gap-2 border border-blue-500/20">
+                      <ShieldCheck className="w-4 h-4" />
+                      <span className="text-[10px] font-black uppercase tracking-widest">Deep Tech KPIs: Core Technology</span>
+                   </div>
+                   <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter leading-[0.9]">
+                     Immutable <br />
+                     Verification.
+                   </h2>
+                   <p className="text-white/40 text-xl font-medium max-w-lg leading-relaxed">
+                     Trust is powered by our proprietary technology—the backbone of our network. We provide full-spectrum visibility into every ton of organic material as it converts into stabilized soil assets.
+                   </p>
+                   <div className="grid grid-cols-2 gap-x-12 gap-y-6 pt-6">
+                      {[
+                        'Real-time Nutrient Analysis',
+                        'Satellite Carbon Auditing',
+                        'IoT Bio-Hub Mesh',
+                        'Fractional Asset Registry'
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-4 group/item cursor-pointer">
+                           <div className="h-px w-4 bg-green-500/50 group-hover/item:w-8 transition-all" />
+                           <span className="text-xs font-bold text-white/60 uppercase tracking-widest">{item}</span>
+                        </div>
+                      ))}
+                   </div>
+                </div>
 
               <div className="rounded-3xl border border-white/10 bg-black/50 p-8 backdrop-blur shadow-2xl relative overflow-hidden group/console">
                  <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
