@@ -111,10 +111,10 @@ const TECH_STACK = [
     bg: "from-blue-500/10 to-green-500/10"
   },
   {
-    title: "Compost & Carbon Initiatives",
-    category: "Market Enablement",
-    desc: "We enable the sale of stabilized compost through partnerships with food companies and the development of high-integrity carbon farming initiatives.",
-    icon: <Coins className="w-5 h-5" />,
+    title: "Market Enablement",
+    category: "Catalytic Partnerships",
+    desc: "Big organic waste producers, multinational food companies and agri sector chemical companies support the Bio-HUB network to transition to regenerative food production.",
+    icon: <Globe2 className="w-5 h-5" />,
     colSpan: "col-span-1",
     bg: "from-yellow-500/10 to-green-500/10"
   }
