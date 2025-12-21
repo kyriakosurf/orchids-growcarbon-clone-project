@@ -519,21 +519,21 @@ export default function Home() {
            <div className="grid md:grid-cols-3 gap-12">
               {[
                  { 
-                   role: "Producers & Municipalities", 
-                   desc: "Offload organic waste liability while achieving zero-waste mandates and reducing operational expenditures.",
-                   benefit: "60% Reduction in Disposal Tipping Fees",
+                   role: "Food Industry Leaders", 
+                   desc: "Partner with Grow Carbon to secure high-quality soil amendments, closing the loop on agricultural supply chains.",
+                   benefit: "Closing the Loop on Food Supply",
                    icon: <Factory className="w-8 h-8" />
                  },
                  { 
-                   role: "Infrastructure Operators", 
-                   desc: "Operate standardized Bio-Hubs with automated digital management and high-margin output offtake.",
-                   benefit: "Predictive O&M via Waste Cloud AI",
+                   role: "Infrastructure Investors", 
+                   desc: "Fund a standardized Bio-Hub Network with automated management and high-margin carbon-farming offtake.",
+                   benefit: "Institutional Regenerative Yield",
                    icon: <Network className="w-8 h-8" />
                  },
                  { 
-                   role: "Farmers & Soil Managers", 
-                   desc: "Access premium, nutrient-dense soil amendments that restore biological health and water retention.",
-                   benefit: "40% Increase in Water Usage Efficiency",
+                   role: "High-Value Carbon Farmers", 
+                   desc: "Access premium, stabilized compost that enables the development of high-integrity soil carbon projects.",
+                   benefit: "Premium Carbon Credit Enablement",
                    icon: <Droplets className="w-8 h-8" />
                  }
               ].map((stake, i) => (
