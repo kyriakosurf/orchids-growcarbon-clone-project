@@ -95,25 +95,25 @@ const MaterialGraph = () => {
 
 const TECH_STACK = [
   {
-    title: "Standardized Bio-Hubs",
-    category: "Physical Assets",
-    desc: "Deployable, modular infrastructure utilizing high-efficiency compost systems to convert liability waste into high-value soil assets.",
+    title: "Bio Hub Network",
+    category: "Physical Infrastructure",
+    desc: "A standardized network of advanced modular hubs utilizing high-efficiency compost systems to convert organic matter into stabilized soil assets.",
     icon: <Factory className="w-5 h-5" />,
     colSpan: "col-span-1",
     bg: "from-green-500/10 to-emerald-500/10"
   },
   {
-    title: "Waste Cloud",
-    category: "Digital Moat",
-    desc: "Real-time traceability and verification engine providing granular data on nutrient flow and carbon sequestration metrics.",
+    title: "Verification Technology",
+    category: "Digital Layer",
+    desc: "Our proprietary technology provides real-time traceability and verification, ensuring granular data on nutrient flow and soil health metrics.",
     icon: <HardDrive className="w-5 h-5" />,
     colSpan: "col-span-1",
     bg: "from-blue-500/10 to-green-500/10"
   },
   {
-    title: "Premium CORCs",
-    category: "Financial Product",
-    desc: "High-integrity Carbon Removal Certificates backed by verifiable soil-building data, enabling institutional-grade climate investment.",
+    title: "High-Integrity CORCs",
+    category: "Financial Enablement",
+    desc: "We enable the development of premium Carbon Removal Certificates through our highly stabilized compost and verifiable soil-building data.",
     icon: <Coins className="w-5 h-5" />,
     colSpan: "col-span-1",
     bg: "from-yellow-500/10 to-green-500/10"
