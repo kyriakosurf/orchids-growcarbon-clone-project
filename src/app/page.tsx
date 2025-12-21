@@ -369,13 +369,13 @@ export default function Home() {
                       <ShieldCheck className="w-4 h-4" />
                       <span className="text-[10px] font-black uppercase tracking-widest">Deep Tech KPIs: Core Technology</span>
                    </div>
-                   <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter leading-[0.9]">
-                     Immutable <br />
-                     Verification.
-                   </h2>
-                   <p className="text-white/40 text-xl font-medium max-w-lg leading-relaxed">
-                     Trust is powered by our proprietary technology—the backbone of our network. We provide full-spectrum visibility into every ton of organic material as it converts into stabilized soil assets.
-                   </p>
+                 <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter leading-[0.9]">
+                   Catalytic <br />
+                   Verification.
+                 </h2>
+                 <p className="text-white/40 text-xl font-medium max-w-lg leading-relaxed">
+                   Inspired by the Frontier model, we enable advanced market commitments for regenerative soil. Our technology provides the immutable data needed to de-risk high-integrity carbon removal.
+                 </p>
                    <div className="grid grid-cols-2 gap-x-12 gap-y-6 pt-6">
                       {[
                         'Real-time Nutrient Analysis',
