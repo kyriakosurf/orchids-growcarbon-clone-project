@@ -507,25 +507,25 @@ export default function Home() {
              <p className="text-white/40 text-xl font-medium">A multi-stakeholder model optimized for planetary and financial success.</p>
            </div>
            
-             <div className="grid md:grid-cols-3 gap-12">
+               <div className="grid md:grid-cols-3 gap-12">
                 {[
                    { 
                      role: "Producers & Municipalities", 
                      desc: "Do you have bio waste in your city, area or activity and nowhere to recycle them? Our biohubs are solving local organic waste management infrastructure gaps and are helping local producers adopt circular economy practices.",
                      benefit: "60% Reduction in Disposal Tipping Fees",
-                     icon: <Factory className="w-8 h-8" />
+                     icon: <Box className="w-8 h-8" />
                    },
                    { 
-                     role: "Infrastructure Operators", 
-                     desc: "Operate standardized Bio-Hubs with automated digital management and high-margin offtake of stabilized regenerative assets.",
-                     benefit: "Predictive O&M via Digital Twin AI",
-                     icon: <Network className="w-8 h-8" />
+                     role: "Multinational Food & Agri-Chem", 
+                     desc: "Big organic waste producers, multinational food companies and agri sector chemical companies can support the transition to a climate resilient and regenerative food production system by supporting the development of our Bio-HUB network.",
+                     benefit: "Regenerative System Transition",
+                     icon: <Globe2 className="w-8 h-8" />
                    },
                    { 
-                     role: "Food Companies & Carbon Initiatives", 
-                     desc: "Are you a food company and need to reach specific climate performance or want to offer your clients greener and healthier products? Our highly stabilized compost is enabling the transition to a climate resilient, friendly and healthier food production paradigm.",
-                     benefit: "High-Integrity Carbon Farming Initiatives",
-                     icon: <Droplets className="w-8 h-8" />
+                     role: "Food Companies & Carbon Buyers", 
+                     desc: "Are you a food company needing to reach specific climate performance? Supporting our Bio-HUB development enables high-value carbon farming initiatives and ensures a supply of greener, healthier products.",
+                     benefit: "High-Integrity Carbon Offtake",
+                     icon: <Coins className="w-8 h-8" />
                    }
                 ].map((stake, i) => (
                  <div key={i} className="space-y-8 group">
