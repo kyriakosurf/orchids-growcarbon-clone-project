@@ -569,7 +569,7 @@ export default function Home() {
               <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-white">Infrastructure</h4>
               <div className="flex flex-col gap-6 text-[11px] font-black text-white/30 uppercase tracking-[0.2em]">
                  <a href="#" className="hover:text-white transition-colors">Bio-Hub Deployment</a>
-                 <a href="#" className="hover:text-white transition-colors">Waste Cloud SDK</a>
+                 <a href="#" className="hover:text-white transition-colors">Technology Stack</a>
                  <a href="#" className="hover:text-white transition-colors">CORC Registry</a>
                  <a href="#" className="hover:text-white transition-colors">Yield Terminal</a>
               </div>
