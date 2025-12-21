@@ -192,9 +192,9 @@ export default function Home() {
                   transition={{ delay: 0.1 }}
                   className="text-6xl md:text-8xl font-bold tracking-tight leading-[0.85]"
                 >
-                  The OS for <br />
-                  <span className="text-white/40 italic">Planetary</span> <br />
-                  Regeneration.
+                  Regenerative <br />
+                  <span className="text-white/40 italic">Infrastructure</span> <br />
+                  Hub Network.
                 </motion.h1>
 
                 <motion.p 
@@ -203,7 +203,7 @@ export default function Home() {
                   transition={{ delay: 0.2 }}
                   className="max-w-xl text-xl text-white/50 leading-relaxed font-medium"
                 >
-                  Positioning Grow Carbon as the necessary technological and physical infrastructure for the circular economy. We turn organic liability into liquid capital.
+                  We are setting up a global bio hub network to transform organic liability into high-value stabilized compost, enabling the next generation of carbon farming.
                 </motion.p>
               </div>
 
@@ -214,7 +214,7 @@ export default function Home() {
                 className="flex flex-col sm:flex-row gap-5"
               >
                 <Button size="lg" className="h-16 rounded bg-green-600 text-white hover:bg-green-500 transition-all font-bold px-10 group text-[11px] uppercase tracking-widest">
-                  Deploy Bio-Hub
+                  Join The Network
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button size="lg" variant="outline" className="h-16 rounded border-white/10 bg-white/5 text-white hover:bg-white/10 font-bold px-10 text-[11px] uppercase tracking-widest">
