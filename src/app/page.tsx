@@ -586,7 +586,7 @@ export default function Home() {
            </div>
         </div>
         <div className="max-w-7xl mx-auto mt-32 pt-12 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-8">
-           <span className="text-[9px] font-bold text-white/10 uppercase tracking-[0.4em]">© 2024 GROW CARBON / THE OPERATING SYSTEM FOR PLANETARY REGENERATION</span>
+             <span className="text-[9px] font-bold text-white/10 uppercase tracking-[0.4em]">© 2024 GROW CARBON / THE REGENERATIVE INFRASTRUCTURE FOR PLANETARY REGENERATION</span>
            <div className="flex items-center gap-3">
               <div className="h-1.5 w-1.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
               <span className="text-[9px] font-bold text-green-500/40 uppercase tracking-[0.4em]">All Systems Nominal</span>
