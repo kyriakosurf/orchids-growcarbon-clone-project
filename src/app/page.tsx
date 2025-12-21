@@ -488,14 +488,14 @@ export default function Home() {
                           <div className="h-1.5 w-1.5 rounded-full bg-green-500" />
                        </div>
                          <div>
-                            <h4 className="font-bold text-sm uppercase tracking-widest mb-2">CORC Enablement</h4>
-                            <p className="text-xs text-white/30 font-medium">Enable the development of high-integrity carbon credits that command institutional price premiums through stabilized compost.</p>
+                            <h4 className="font-bold text-sm uppercase tracking-widest mb-2">Catalytic Offtake</h4>
+                            <p className="text-xs text-white/30 font-medium">Mirroring the Frontier model, we facilitate advance market commitments from food giants to de-risk infrastructure deployment.</p>
                          </div>
-                    </div>
-                 </div>
-                 <Button className="h-14 px-10 rounded-full bg-white text-black hover:bg-green-500 transition-all font-black text-[10px] uppercase tracking-widest">
-                    Request Investment Framework
-                 </Button>
+                      </div>
+                   </div>
+                   <Button className="h-14 px-10 rounded-full bg-white text-black hover:bg-green-500 transition-all font-black text-[10px] uppercase tracking-widest">
+                      Explore Catalyst Model
+                   </Button>
               </div>
            </div>
         </section>
