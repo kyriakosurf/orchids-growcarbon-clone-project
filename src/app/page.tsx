@@ -321,7 +321,7 @@ export default function Home() {
             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-green-500">The Bio-Conversion Engine</span>
             <h2 className="text-5xl lg:text-6xl font-bold tracking-tight">The 3-Layer Tech Stack</h2>
             <p className="text-white/40 max-w-2xl mx-auto text-lg">
-              Operating at the intersection of biology, proprietary technology, and infrastructure finance.
+              Operating at the intersection of biology, software, and finance to rebuild the planetary operating system.
             </p>
           </div>
 
@@ -367,14 +367,14 @@ export default function Home() {
               <div className="space-y-10">
                  <div className="bg-blue-500/10 text-blue-400 px-5 py-2 rounded-full inline-flex items-center gap-2 border border-blue-500/20">
                     <ShieldCheck className="w-4 h-4" />
-                    <span className="text-[10px] font-black uppercase tracking-widest">Deep Tech KPIs: Waste Cloud</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest">Deep Tech KPIs: Core Technology</span>
                  </div>
                  <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter leading-[0.9]">
                    Immutable <br />
                    Verification.
                  </h2>
                  <p className="text-white/40 text-xl font-medium max-w-lg leading-relaxed">
-                   Trust is powered by Waste Cloud—our digital moat. We provide full-spectrum visibility into every ton of organic material as it converts from liability to soil-building asset.
+                   Trust is powered by our proprietary technology—the backbone of our network. We provide full-spectrum visibility into every ton of organic material as it converts into stabilized soil assets.
                  </p>
                  <div className="grid grid-cols-2 gap-x-12 gap-y-6 pt-6">
                     {[
