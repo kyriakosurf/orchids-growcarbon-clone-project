@@ -321,7 +321,7 @@ export default function Home() {
             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-green-500">The Bio-Conversion Engine</span>
             <h2 className="text-5xl lg:text-6xl font-bold tracking-tight">The 3-Layer Tech Stack</h2>
             <p className="text-white/40 max-w-2xl mx-auto text-lg">
-              Operating at the intersection of biology, software, and finance to rebuild the planetary operating system.
+              Operating at the intersection of biology, proprietary technology, and infrastructure finance.
             </p>
           </div>
 
@@ -396,9 +396,9 @@ export default function Home() {
                     <div className="flex gap-2">
                        <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em]">Live Data Stream</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                     <div className="flex items-center gap-2">
                        <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                       <span className="text-blue-500 text-[10px] font-bold uppercase tracking-widest underline underline-offset-4 cursor-pointer">Waste Cloud v2.01</span>
+                       <span className="text-blue-500 text-[10px] font-bold uppercase tracking-widest underline underline-offset-4 cursor-pointer">Infrastructure OS v2.01</span>
                     </div>
                  </div>
                  <div className="space-y-6 font-mono text-[12px]">
@@ -586,7 +586,7 @@ export default function Home() {
            </div>
         </div>
         <div className="max-w-7xl mx-auto mt-32 pt-12 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-8">
-           <span className="text-[9px] font-bold text-white/10 uppercase tracking-[0.4em]">© 2024 GROW CARBON / INDUSTRIAL REGENERATIVE INFRASTRUCTURE</span>
+           <span className="text-[9px] font-bold text-white/10 uppercase tracking-[0.4em]">© 2024 GROW CARBON / THE OPERATING SYSTEM FOR PLANETARY REGENERATION</span>
            <div className="flex items-center gap-3">
               <div className="h-1.5 w-1.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
               <span className="text-[9px] font-bold text-green-500/40 uppercase tracking-[0.4em]">All Systems Nominal</span>
