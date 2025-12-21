@@ -321,7 +321,7 @@ export default function Home() {
             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-green-500">The Bio-Conversion Engine</span>
             <h2 className="text-5xl lg:text-6xl font-bold tracking-tight">The 3-Layer Tech Stack</h2>
             <p className="text-white/40 max-w-2xl mx-auto text-lg">
-              Operating at the intersection of biology, software, and finance to rebuild the planetary operating system.
+              Operating at the intersection of biology, proprietary technology, and infrastructure finance.
             </p>
           </div>
 
@@ -367,14 +367,14 @@ export default function Home() {
               <div className="space-y-10">
                  <div className="bg-blue-500/10 text-blue-400 px-5 py-2 rounded-full inline-flex items-center gap-2 border border-blue-500/20">
                     <ShieldCheck className="w-4 h-4" />
-                    <span className="text-[10px] font-black uppercase tracking-widest">Deep Tech KPIs: Core Technology</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest">Deep Tech KPIs: Waste Cloud</span>
                  </div>
                  <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter leading-[0.9]">
                    Immutable <br />
                    Verification.
                  </h2>
                  <p className="text-white/40 text-xl font-medium max-w-lg leading-relaxed">
-                   Trust is powered by our proprietary technology—the backbone of our network. We provide full-spectrum visibility into every ton of organic material as it converts into stabilized soil assets.
+                   Trust is powered by Waste Cloud—our digital moat. We provide full-spectrum visibility into every ton of organic material as it converts from liability to soil-building asset.
                  </p>
                  <div className="grid grid-cols-2 gap-x-12 gap-y-6 pt-6">
                     {[
@@ -396,9 +396,9 @@ export default function Home() {
                     <div className="flex gap-2">
                        <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em]">Live Data Stream</span>
                     </div>
-                     <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2">
                        <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                       <span className="text-blue-500 text-[10px] font-bold uppercase tracking-widest underline underline-offset-4 cursor-pointer">Infrastructure OS v2.01</span>
+                       <span className="text-blue-500 text-[10px] font-bold uppercase tracking-widest underline underline-offset-4 cursor-pointer">Waste Cloud v2.01</span>
                     </div>
                  </div>
                  <div className="space-y-6 font-mono text-[12px]">
@@ -488,8 +488,17 @@ export default function Home() {
                           <div className="h-1.5 w-1.5 rounded-full bg-green-500" />
                        </div>
                        <div>
-                          <h4 className="font-bold text-sm uppercase tracking-widest mb-2">CORC Premium</h4>
-                          <p className="text-xs text-white/30 font-medium">Generate high-integrity carbon credits that command institutional price premiums.</p>
+                          <h4 className="font-bold text-sm uppercase tracking-widest mb-2">Carbon Credit Enablement</h4>
+                          <p className="text-xs text-white/30 font-medium">Enable the development of high-integrity carbon removal credits through our highly stabilized compost assets.</p>
+                       </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                       <div className="h-6 w-6 rounded-full bg-green-500/10 flex items-center justify-center mt-1">
+                          <div className="h-1.5 w-1.5 rounded-full bg-green-500" />
+                       </div>
+                       <div>
+                          <h4 className="font-bold text-sm uppercase tracking-widest mb-2">Food Company Partnerships</h4>
+                          <p className="text-xs text-white/30 font-medium">Enable the sale of premium compost through strategic partnerships with high-end food companies.</p>
                        </div>
                     </div>
                  </div>
@@ -569,7 +578,7 @@ export default function Home() {
               <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-white">Infrastructure</h4>
               <div className="flex flex-col gap-6 text-[11px] font-black text-white/30 uppercase tracking-[0.2em]">
                  <a href="#" className="hover:text-white transition-colors">Bio-Hub Deployment</a>
-                 <a href="#" className="hover:text-white transition-colors">Technology Stack</a>
+                 <a href="#" className="hover:text-white transition-colors">Waste Cloud SDK</a>
                  <a href="#" className="hover:text-white transition-colors">CORC Registry</a>
                  <a href="#" className="hover:text-white transition-colors">Yield Terminal</a>
               </div>
