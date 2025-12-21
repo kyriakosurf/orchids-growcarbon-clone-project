@@ -321,7 +321,7 @@ export default function Home() {
             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-green-500">The Bio-Conversion Engine</span>
             <h2 className="text-5xl lg:text-6xl font-bold tracking-tight">The 3-Layer Tech Stack</h2>
             <p className="text-white/40 max-w-2xl mx-auto text-lg">
-              Operating at the intersection of biology, proprietary technology, and infrastructure finance.
+              Operating at the intersection of biology, software, and finance to rebuild the planetary operating system.
             </p>
           </div>
 
@@ -398,7 +398,7 @@ export default function Home() {
                     </div>
                      <div className="flex items-center gap-2">
                        <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                       <span className="text-blue-500 text-[10px] font-bold uppercase tracking-widest underline underline-offset-4 cursor-pointer">Infrastructure OS v2.01</span>
+                       <span className="text-blue-500 text-[10px] font-bold uppercase tracking-widest underline underline-offset-4 cursor-pointer">Infrastructure Hub v2.01</span>
                     </div>
                  </div>
                  <div className="space-y-6 font-mono text-[12px]">
@@ -569,7 +569,7 @@ export default function Home() {
               <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-white">Infrastructure</h4>
               <div className="flex flex-col gap-6 text-[11px] font-black text-white/30 uppercase tracking-[0.2em]">
                  <a href="#" className="hover:text-white transition-colors">Bio-Hub Deployment</a>
-                 <a href="#" className="hover:text-white transition-colors">Waste Cloud SDK</a>
+                 <a href="#" className="hover:text-white transition-colors">Technology Stack</a>
                  <a href="#" className="hover:text-white transition-colors">CORC Registry</a>
                  <a href="#" className="hover:text-white transition-colors">Yield Terminal</a>
               </div>
