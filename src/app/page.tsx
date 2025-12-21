@@ -111,9 +111,9 @@ const TECH_STACK = [
     bg: "from-blue-500/10 to-green-500/10"
   },
   {
-    title: "High-Integrity CORCs",
-    category: "Financial Enablement",
-    desc: "We enable the development of premium Carbon Removal Certificates through our highly stabilized compost and verifiable soil-building data.",
+    title: "Compost & Carbon Initiatives",
+    category: "Market Enablement",
+    desc: "We enable the sale of stabilized compost through partnerships with food companies and the development of high-integrity carbon farming initiatives.",
     icon: <Coins className="w-5 h-5" />,
     colSpan: "col-span-1",
     bg: "from-yellow-500/10 to-green-500/10"
