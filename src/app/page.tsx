@@ -487,10 +487,10 @@ export default function Home() {
                        <div className="h-6 w-6 rounded-full bg-green-500/10 flex items-center justify-center mt-1">
                           <div className="h-1.5 w-1.5 rounded-full bg-green-500" />
                        </div>
-                       <div>
-                          <h4 className="font-bold text-sm uppercase tracking-widest mb-2">CORC Premium</h4>
-                          <p className="text-xs text-white/30 font-medium">Generate high-integrity carbon credits that command institutional price premiums.</p>
-                       </div>
+                         <div>
+                            <h4 className="font-bold text-sm uppercase tracking-widest mb-2">CORC Enablement</h4>
+                            <p className="text-xs text-white/30 font-medium">Enable the development of high-integrity carbon credits that command institutional price premiums through stabilized compost.</p>
+                         </div>
                     </div>
                  </div>
                  <Button className="h-14 px-10 rounded-full bg-white text-black hover:bg-green-500 transition-all font-black text-[10px] uppercase tracking-widest">
