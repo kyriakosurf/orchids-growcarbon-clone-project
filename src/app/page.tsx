@@ -77,10 +77,10 @@ const MaterialGraph = () => {
 
         <div className="grid grid-cols-4 gap-4 mt-8">
           {[
-            { label: "CO2e Removed", value: "1,240t" },
+            { label: "CO2e Enabled", value: "1,240t" },
             { label: "Hub Efficiency", value: "98.4%" },
             { label: "Soil Purity", value: "A-Grade" },
-            { label: "Verification", value: "Cloud-Sync" }
+            { label: "Verification", value: "System-Synch" }
           ].map((stat, i) => (
             <div key={i} className="space-y-1">
               <p className="text-[9px] uppercase tracking-widest text-white/30 font-bold">{stat.label}</p>
