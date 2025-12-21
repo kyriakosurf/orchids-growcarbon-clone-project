@@ -507,27 +507,27 @@ export default function Home() {
              <p className="text-white/40 text-xl font-medium">A multi-stakeholder model optimized for planetary and financial success.</p>
            </div>
            
-           <div className="grid md:grid-cols-3 gap-12">
-              {[
-                 { 
-                   role: "Producers & Municipalities", 
-                   desc: "Offload organic waste liability while achieving zero-waste mandates and reducing operational expenditures.",
-                   benefit: "60% Reduction in Disposal Tipping Fees",
-                   icon: <Factory className="w-8 h-8" />
-                 },
-                 { 
-                   role: "Infrastructure Operators", 
-                   desc: "Operate standardized Bio-Hubs with automated digital management and high-margin output offtake.",
-                   benefit: "Predictive O&M via Waste Cloud AI",
-                   icon: <Network className="w-8 h-8" />
-                 },
-                 { 
-                   role: "Farmers & Soil Managers", 
-                   desc: "Access premium, nutrient-dense soil amendments that restore biological health and water retention.",
-                   benefit: "40% Increase in Water Usage Efficiency",
-                   icon: <Droplets className="w-8 h-8" />
-                 }
-              ].map((stake, i) => (
+             <div className="grid md:grid-cols-3 gap-12">
+                {[
+                   { 
+                     role: "Producers & Municipalities", 
+                     desc: "Do you have bio waste in your city, area or activity and nowhere to recycle them? Our biohubs are solving local organic waste management infrastructure gaps and are helping local producers adopt circular economy practices.",
+                     benefit: "60% Reduction in Disposal Tipping Fees",
+                     icon: <Factory className="w-8 h-8" />
+                   },
+                   { 
+                     role: "Infrastructure Operators", 
+                     desc: "Operate standardized Bio-Hubs with automated digital management and high-margin offtake of stabilized regenerative assets.",
+                     benefit: "Predictive O&M via Digital Twin AI",
+                     icon: <Network className="w-8 h-8" />
+                   },
+                   { 
+                     role: "Food Companies & Carbon Initiatives", 
+                     desc: "Are you a food company and need to reach specific climate performance or want to offer your clients greener and healthier products? Our highly stabilized compost is enabling the transition to a climate resilient, friendly and healthier food production paradigm.",
+                     benefit: "High-Integrity Carbon Farming Initiatives",
+                     icon: <Droplets className="w-8 h-8" />
+                   }
+                ].map((stake, i) => (
                  <div key={i} className="space-y-8 group">
                     <div className="h-16 w-16 rounded-2xl bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-green-500 group-hover:text-black transition-all">
                        {stake.icon}
