@@ -144,11 +144,11 @@ export default function Home() {
               <span className="text-[8px] font-bold text-green-500 uppercase tracking-widest leading-none mt-1">Industrial Regeneration</span>
             </div>
           </div>
-          <div className="hidden lg:flex items-center gap-10">
-            {['Infrastructure', 'Waste Cloud', 'CORCs', 'Investors'].map((item) => (
-              <a key={item} href="#" className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/40 hover:text-white transition-colors">{item}</a>
-            ))}
-          </div>
+            <div className="hidden lg:flex items-center gap-10">
+              {['Bio Hub Network', 'Technology', 'CORCs', 'Investors'].map((item) => (
+                <a key={item} href="#" className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/40 hover:text-white transition-colors">{item}</a>
+              ))}
+            </div>
         </div>
         <div className="flex items-center gap-6">
           <div className="hidden xl:flex items-center gap-6 mr-6 border-r border-white/10 pr-6">
