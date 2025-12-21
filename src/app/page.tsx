@@ -321,7 +321,7 @@ export default function Home() {
             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-green-500">The Bio-Conversion Engine</span>
             <h2 className="text-5xl lg:text-6xl font-bold tracking-tight">The 3-Layer Tech Stack</h2>
             <p className="text-white/40 max-w-2xl mx-auto text-lg">
-              Operating at the intersection of biology, proprietary technology, and infrastructure finance.
+              Operating at the intersection of biology, software, and finance to rebuild the planetary operating system.
             </p>
           </div>
 
@@ -367,14 +367,14 @@ export default function Home() {
               <div className="space-y-10">
                  <div className="bg-blue-500/10 text-blue-400 px-5 py-2 rounded-full inline-flex items-center gap-2 border border-blue-500/20">
                     <ShieldCheck className="w-4 h-4" />
-                    <span className="text-[10px] font-black uppercase tracking-widest">Deep Tech KPIs: Waste Cloud</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest">Deep Tech KPIs: Core Technology</span>
                  </div>
                  <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter leading-[0.9]">
                    Immutable <br />
                    Verification.
                  </h2>
                  <p className="text-white/40 text-xl font-medium max-w-lg leading-relaxed">
-                   Trust is powered by Waste Cloud—our digital moat. We provide full-spectrum visibility into every ton of organic material as it converts from liability to soil-building asset.
+                   Trust is powered by our proprietary technology—the backbone of our network. We provide full-spectrum visibility into every ton of organic material as it converts into stabilized soil assets.
                  </p>
                  <div className="grid grid-cols-2 gap-x-12 gap-y-6 pt-6">
                     {[
@@ -488,17 +488,8 @@ export default function Home() {
                           <div className="h-1.5 w-1.5 rounded-full bg-green-500" />
                        </div>
                        <div>
-                          <h4 className="font-bold text-sm uppercase tracking-widest mb-2">Carbon Credit Enablement</h4>
-                          <p className="text-xs text-white/30 font-medium">Enable the development of high-integrity carbon removal credits through our highly stabilized compost assets.</p>
-                       </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                       <div className="h-6 w-6 rounded-full bg-green-500/10 flex items-center justify-center mt-1">
-                          <div className="h-1.5 w-1.5 rounded-full bg-green-500" />
-                       </div>
-                       <div>
-                          <h4 className="font-bold text-sm uppercase tracking-widest mb-2">Food Company Partnerships</h4>
-                          <p className="text-xs text-white/30 font-medium">Enable the sale of premium compost through strategic partnerships with high-end food companies.</p>
+                          <h4 className="font-bold text-sm uppercase tracking-widest mb-2">CORC Premium</h4>
+                          <p className="text-xs text-white/30 font-medium">Generate high-integrity carbon credits that command institutional price premiums.</p>
                        </div>
                     </div>
                  </div>
@@ -519,21 +510,21 @@ export default function Home() {
            <div className="grid md:grid-cols-3 gap-12">
               {[
                  { 
-                   role: "Food Industry Leaders", 
-                   desc: "Partner with Grow Carbon to secure high-quality soil amendments, closing the loop on agricultural supply chains.",
-                   benefit: "Closing the Loop on Food Supply",
+                   role: "Producers & Municipalities", 
+                   desc: "Offload organic waste liability while achieving zero-waste mandates and reducing operational expenditures.",
+                   benefit: "60% Reduction in Disposal Tipping Fees",
                    icon: <Factory className="w-8 h-8" />
                  },
                  { 
-                   role: "Infrastructure Investors", 
-                   desc: "Fund a standardized Bio-Hub Network with automated management and high-margin carbon-farming offtake.",
-                   benefit: "Institutional Regenerative Yield",
+                   role: "Infrastructure Operators", 
+                   desc: "Operate standardized Bio-Hubs with automated digital management and high-margin output offtake.",
+                   benefit: "Predictive O&M via Waste Cloud AI",
                    icon: <Network className="w-8 h-8" />
                  },
                  { 
-                   role: "High-Value Carbon Farmers", 
-                   desc: "Access premium, stabilized compost that enables the development of high-integrity soil carbon projects.",
-                   benefit: "Premium Carbon Credit Enablement",
+                   role: "Farmers & Soil Managers", 
+                   desc: "Access premium, nutrient-dense soil amendments that restore biological health and water retention.",
+                   benefit: "40% Increase in Water Usage Efficiency",
                    icon: <Droplets className="w-8 h-8" />
                  }
               ].map((stake, i) => (
@@ -595,7 +586,7 @@ export default function Home() {
            </div>
         </div>
         <div className="max-w-7xl mx-auto mt-32 pt-12 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-8">
-           <span className="text-[9px] font-bold text-white/10 uppercase tracking-[0.4em]">© 2024 GROW CARBON / THE OPERATING SYSTEM FOR PLANETARY REGENERATION</span>
+           <span className="text-[9px] font-bold text-white/10 uppercase tracking-[0.4em]">© 2024 GROW CARBON / INDUSTRIAL REGENERATIVE INFRASTRUCTURE</span>
            <div className="flex items-center gap-3">
               <div className="h-1.5 w-1.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
               <span className="text-[9px] font-bold text-green-500/40 uppercase tracking-[0.4em]">All Systems Nominal</span>
