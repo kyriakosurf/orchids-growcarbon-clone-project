@@ -192,9 +192,9 @@ export default function Home() {
                   transition={{ delay: 0.1 }}
                   className="text-6xl md:text-8xl font-bold tracking-tight leading-[0.85]"
                 >
-                  Regenerative <br />
-                  <span className="text-white/40 italic">Infrastructure</span> <br />
-                  Hub Network.
+                  Architecting the <br />
+                  <span className="text-white/40 italic">Circular</span> <br />
+                  Bioeconomy.
                 </motion.h1>
 
                 <motion.p 
@@ -203,7 +203,7 @@ export default function Home() {
                   transition={{ delay: 0.2 }}
                   className="max-w-xl text-xl text-white/50 leading-relaxed font-medium"
                 >
-                  We are setting up a global bio hub network to transform organic liability into high-value stabilized compost, enabling the next generation of carbon farming.
+                  We transform organic liabilities into high-value regenerative assets through a distributed network of decentralized Bio-Hubs.
                 </motion.p>
               </div>
 
