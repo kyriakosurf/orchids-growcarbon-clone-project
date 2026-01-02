@@ -280,22 +280,29 @@ export default function Home() {
                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-red-500">The Problem</span>
                  <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">The Broken Loop</h2>
                  <p className="text-white/40 text-xl leading-relaxed max-w-xl">
-                   Global food systems are operating as a one-way extraction. Waste creates a multi-billion dollar liability for municipalities, while primary agricultural soils face total collapse.
+                   Landfill saturation, chemical fertilizer dependency, and the "Traceability Gap" in ESG reporting are creating systemic risks across global food systems.
                  </p>
-                 <div className="grid grid-cols-2 gap-8 pt-8">
+                 <div className="grid grid-cols-3 gap-6 pt-8">
                     <div className="space-y-4">
                        <div className="h-12 w-12 rounded bg-red-500/10 flex items-center justify-center text-red-500">
                           <Activity className="w-6 h-6" />
                        </div>
-                       <h4 className="font-bold text-sm uppercase tracking-wider">Waste Liability</h4>
-                       <p className="text-xs text-white/40 leading-relaxed">Billions of tons of organic matter buried in landfills annually, emitting methane and draining municipal budgets.</p>
+                       <h4 className="font-bold text-sm uppercase tracking-wider">Landfill Saturation</h4>
+                       <p className="text-xs text-white/40 leading-relaxed">Billions of tons of organic matter buried annually, emitting methane and draining municipal budgets.</p>
                     </div>
                     <div className="space-y-4">
                        <div className="h-12 w-12 rounded bg-red-500/10 flex items-center justify-center text-red-500">
                           <Droplets className="w-6 h-6" />
                        </div>
-                       <h4 className="font-bold text-sm uppercase tracking-wider">Soil Collapse</h4>
-                       <p className="text-xs text-white/40 leading-relaxed">Industrial farming has depleted 50% of topsoil health, endangering global food security and planetary water cycles.</p>
+                       <h4 className="font-bold text-sm uppercase tracking-wider">Chemical Dependency</h4>
+                       <p className="text-xs text-white/40 leading-relaxed">Industrial farming relies on synthetic fertilizers that degrade soil health and pollute waterways.</p>
+                    </div>
+                    <div className="space-y-4">
+                       <div className="h-12 w-12 rounded bg-red-500/10 flex items-center justify-center text-red-500">
+                          <ShieldCheck className="w-6 h-6" />
+                       </div>
+                       <h4 className="font-bold text-sm uppercase tracking-wider">Traceability Gap</h4>
+                       <p className="text-xs text-white/40 leading-relaxed">Corporates lack verifiable data for Scope 3 emissions, undermining ESG commitments and investor trust.</p>
                     </div>
                  </div>
               </div>
