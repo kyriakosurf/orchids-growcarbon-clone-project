@@ -536,7 +536,7 @@ export default function Home() {
         {/* STAKEHOLDERS SECTION */}
         <section className="bg-white/[0.02] border border-white/5 rounded-[50px] p-12 lg:p-24 space-y-20">
            <div className="max-w-3xl space-y-6">
-             <h2 className="text-4xl lg:text-5xl font-bold tracking-tight italic uppercase">Building Value Across the Regenerative Economy.</h2>
+             <h2 className="text-4xl lg:text-5xl font-bold tracking-tight italic uppercase">The Ecosystem.</h2>
              <p className="text-white/40 text-xl font-medium">A multi-stakeholder model optimized for planetary and financial success.</p>
            </div>
            
