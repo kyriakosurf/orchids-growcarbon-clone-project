@@ -95,17 +95,17 @@ const MaterialGraph = () => {
 
 const TECH_STACK = [
   {
-    title: "Bio Hub Network",
+    title: "Biological Engineering",
     category: "Physical Infrastructure",
-    desc: "A standardized network of advanced modular hubs utilizing high-efficiency compost systems to convert organic matter into stabilized soil assets.",
+    desc: "A distributed network of decentralized Bio-Hubs using advanced compost systems to convert organic waste into highly stabilized soil assets.",
     icon: <Factory className="w-5 h-5" />,
     colSpan: "col-span-1",
     bg: "from-green-500/10 to-emerald-500/10"
   },
   {
-    title: "Verification Technology",
-    category: "Digital Layer",
-    desc: "Our proprietary technology provides real-time traceability and verification, ensuring granular data on nutrient flow and soil health metrics.",
+    title: "Digital Intelligence",
+    category: "Wastecloud™ Platform",
+    desc: "Our proprietary Wastecloud™ technology provides real-time traceability and verification, closing the ESG reporting gap with immutable data.",
     icon: <HardDrive className="w-5 h-5" />,
     colSpan: "col-span-1",
     bg: "from-blue-500/10 to-green-500/10"
