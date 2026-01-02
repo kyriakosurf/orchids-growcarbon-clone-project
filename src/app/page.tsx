@@ -507,6 +507,32 @@ export default function Home() {
            </div>
         </section>
 
+        {/* LIVE IMPACT METRICS - THESSCOMPOST */}
+        <section className="py-20 border-y border-white/5">
+           <div className="text-center space-y-6 mb-16">
+              <div className="inline-flex items-center gap-3 px-5 py-2 rounded bg-green-500/5 border border-green-500/20">
+                 <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse" />
+                 <span className="text-[9px] font-black uppercase tracking-[0.25em] text-green-500">Live Data: Thesscompost Hub</span>
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">Real-Time Impact Metrics</h2>
+              <p className="text-white/40 text-lg max-w-2xl mx-auto">Transparent, verifiable data from our operational Bio-Hub network.</p>
+           </div>
+           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                 { value: '2,847', label: 'Tons Diverted', suffix: 't', change: '+12% MoM' },
+                 { value: '1,240', label: 'CO₂ Sequestered', suffix: 't', change: '+8% MoM' },
+                 { value: '45,000', label: 'Liters Water Saved', suffix: '/ha', change: 'Per Hectare' },
+                 { value: '98.4', label: 'Hub Efficiency', suffix: '%', change: 'System Avg' },
+              ].map((metric, i) => (
+                 <div key={i} className="p-8 rounded-3xl border border-white/5 bg-white/[0.02] space-y-4 text-center">
+                    <p className="text-4xl lg:text-5xl font-black">{metric.value}<span className="text-lg text-green-500">{metric.suffix}</span></p>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-white/30">{metric.label}</p>
+                    <p className="text-[9px] font-mono text-green-500/60">{metric.change}</p>
+                 </div>
+              ))}
+           </div>
+        </section>
+
         {/* STAKEHOLDERS SECTION */}
         <section className="bg-white/[0.02] border border-white/5 rounded-[50px] p-12 lg:p-24 space-y-20">
            <div className="max-w-3xl space-y-6">
