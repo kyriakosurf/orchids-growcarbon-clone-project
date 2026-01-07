@@ -220,9 +220,6 @@ export default function Home() {
                   Join The Network
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button size="lg" variant="outline" className="h-16 rounded border-white/10 bg-white/5 text-white hover:bg-white/10 font-bold px-10 text-[11px] uppercase tracking-widest">
-                   Institutional Deck
-                </Button>
               </motion.div>
 
               <div className="grid grid-cols-3 gap-10 pt-10 border-t border-white/5">
