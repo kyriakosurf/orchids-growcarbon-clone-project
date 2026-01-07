@@ -278,10 +278,10 @@ export default function Home() {
         <section className="py-20 border-y border-white/5">
            <div className="grid lg:grid-cols-2 gap-20 items-start">
               <div className="space-y-8">
-                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-red-500">The Problem</span>
-                 <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">The Broken Loop</h2>
+                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-red-500">The Opportunity</span>
+                 <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">The Circularity Gap</h2>
                  <p className="text-white/40 text-xl leading-relaxed max-w-xl">
-                   Landfill saturation, chemical fertilizer dependency, and the "Traceability Gap" in ESG reporting are creating systemic risks across global food systems.
+                   Global supply chains are currently disrupted by linear waste models and chemical fertilizer dependency. In the Mediterranean alone, hotel and agricultural sectors face rising landfill taxes and declining soil productivity.
                  </p>
                  <div className="grid grid-cols-3 gap-6 pt-8">
                     <div className="space-y-4">
