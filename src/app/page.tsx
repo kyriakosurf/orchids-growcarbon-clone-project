@@ -96,8 +96,8 @@ const MaterialGraph = () => {
 const TECH_STACK = [
   {
     title: "Biological Engineering",
-    category: "Physical Infrastructure",
-    desc: "A distributed network of decentralized Bio-Hubs using advanced compost systems to convert organic waste into highly stabilized soil assets.",
+    category: "Infrastructure",
+    desc: "Leveraging state-of-the-art cleantech from Compost Systems GmbH to transform organic liabilities into hyper-stabilized compost assets.",
     icon: <Factory className="w-5 h-5" />,
     colSpan: "col-span-1",
     bg: "from-green-500/10 to-emerald-500/10"
@@ -105,7 +105,7 @@ const TECH_STACK = [
   {
     title: "Digital Intelligence",
     category: "Wastecloud™ Platform",
-    desc: "Our proprietary Wastecloud™ technology provides real-time traceability and verification, closing the ESG reporting gap with immutable data.",
+    desc: "Our proprietary Wastecloud™ traceability layer generates verifiable carbon assets and closes the ESG reporting gap with immutable data.",
     icon: <HardDrive className="w-5 h-5" />,
     colSpan: "col-span-1",
     bg: "from-blue-500/10 to-green-500/10"
