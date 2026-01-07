@@ -222,7 +222,7 @@ export default function Home() {
                 </Button>
               </motion.div>
 
-              <div className="grid grid-cols-3 gap-10 pt-10 border-t border-white/5">
+              <div className="grid grid-cols-2 gap-10 pt-10 border-t border-white/5">
                 {[
                   { value: '142', label: 'Hubs Deployed' },
                   { value: '8.4M', label: 'Tons Diverted' },
@@ -332,8 +332,8 @@ export default function Home() {
           <div className="text-center space-y-4">
             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-green-500">The Bio-Conversion Engine</span>
             <h2 className="text-5xl lg:text-6xl font-bold tracking-tight">The 3-Layer Tech Stack</h2>
-            <p className="text-white/40 max-w-2xl mx-auto text-lg">
-              Operating at the intersection of biology, software, and finance to deploy essential regenerative infrastructure.
+              <p className="text-white/40 max-w-2xl mx-auto text-lg">
+              Operating at the intersection of biology, software, and industrial engineering to deploy essential regenerative infrastructure.
             </p>
           </div>
 
@@ -486,7 +486,7 @@ export default function Home() {
         <section className="bg-white/[0.02] border border-white/5 rounded-[50px] p-12 lg:p-24 space-y-20">
            <div className="max-w-3xl space-y-6">
              <h2 className="text-4xl lg:text-5xl font-bold tracking-tight italic uppercase">The Ecosystem.</h2>
-             <p className="text-white/40 text-xl font-medium">A multi-stakeholder model optimized for planetary and financial success.</p>
+             <p className="text-white/40 text-xl font-medium">A multi-stakeholder model optimized for planetary health and resource resilience.</p>
            </div>
            
                <div className="grid md:grid-cols-4 gap-10">
