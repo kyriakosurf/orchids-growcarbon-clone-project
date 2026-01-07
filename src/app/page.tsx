@@ -226,7 +226,6 @@ export default function Home() {
                 {[
                   { value: '142', label: 'Hubs Deployed' },
                   { value: '8.4M', label: 'Tons Diverted' },
-                  { value: '$124M', label: 'EBITDA Enablement' },
                 ].map((stat, i) => (
                   <div key={i} className="space-y-2">
                     <p className="text-3xl font-black">{stat.value}</p>
