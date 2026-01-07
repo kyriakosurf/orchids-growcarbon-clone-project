@@ -536,7 +536,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="border-t border-white/5 mt-40 py-32 px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-20">
            <div className="col-span-1 lg:col-span-2 space-y-10">
               <div className="flex items-center gap-4">
                  <div className="h-10 w-10 rounded bg-white flex items-center justify-center">
@@ -571,6 +571,20 @@ export default function Home() {
                    <a href="#" className="hover:text-white transition-colors">Compliance</a>
                    <a href="#" className="hover:text-white transition-colors">Privacy</a>
                 </div>
+           </div>
+
+           <div className="space-y-10">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-white">Headquarters</h4>
+              <div className="flex flex-col gap-8 text-[11px] font-black text-white/30 uppercase tracking-[0.2em]">
+                   <div className="flex gap-4">
+                      <MapPin className="w-4 h-4 text-green-500 shrink-0" />
+                      <span className="leading-relaxed">Mitropoleos 51<br />546 23 Thessaloniki<br />Greece</span>
+                   </div>
+                   <div className="flex gap-4">
+                      <Phone className="w-4 h-4 text-green-500 shrink-0" />
+                      <span>+30 2310 254520</span>
+                   </div>
+              </div>
            </div>
         </div>
         <div className="max-w-7xl mx-auto mt-32 pt-12 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-8">
