@@ -455,62 +455,6 @@ export default function Home() {
            </div>
         </section>
 
-        {/* THE INVESTMENT MODEL */}
-        <section className="space-y-20 py-20">
-           <div className="grid lg:grid-cols-2 gap-20 items-center">
-              <div className="order-2 lg:order-1 relative">
-                 <div className="grid grid-cols-2 gap-4">
-                    {[
-                       { label: 'Asset IRR', value: '18-24%', icon: <TrendingUp className="w-4 h-4" /> },
-                       { label: 'Payback Period', value: '3.2 yrs', icon: <Zap className="w-4 h-4" /> },
-                       { label: 'Contract Length', value: '10+ yrs', icon: <Database className="w-4 h-4" /> },
-                       { label: 'ESG Alpha', value: 'Premium', icon: <ShieldCheck className="w-4 h-4" /> },
-                    ].map((stat, i) => (
-                       <div key={i} className="p-8 rounded-3xl border border-white/5 bg-white/[0.02] space-y-4">
-                          <div className="h-8 w-8 rounded-lg bg-white/5 flex items-center justify-center text-white/40">
-                             {stat.icon}
-                          </div>
-                          <div className="space-y-1">
-                             <p className="text-2xl font-bold italic">{stat.value}</p>
-                             <p className="text-[9px] font-black uppercase tracking-widest text-white/30">{stat.label}</p>
-                          </div>
-                       </div>
-                    ))}
-                 </div>
-              </div>
-              <div className="order-1 lg:order-2 space-y-10">
-                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-green-500">Financial Sophistication</span>
-                 <h2 className="text-5xl font-bold tracking-tight">Localized Infrastructure Returns.</h2>
-                 <p className="text-white/40 text-xl leading-relaxed">
-                   We provide infrastructure investors with de-risked, long-term yields backed by municipal waste contracts and high-margin carbon removal markets.
-                 </p>
-                 <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                       <div className="h-6 w-6 rounded-full bg-green-500/10 flex items-center justify-center mt-1">
-                          <div className="h-1.5 w-1.5 rounded-full bg-green-500" />
-                       </div>
-                       <div>
-                          <h4 className="font-bold text-sm uppercase tracking-widest mb-2">Liability Arbitrage</h4>
-                          <p className="text-xs text-white/30 font-medium">Capture the spread between tipping fees and soil amendment sales price.</p>
-                       </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                       <div className="h-6 w-6 rounded-full bg-green-500/10 flex items-center justify-center mt-1">
-                          <div className="h-1.5 w-1.5 rounded-full bg-green-500" />
-                       </div>
-                         <div>
-                            <h4 className="font-bold text-sm uppercase tracking-widest mb-2">Catalytic Offtake</h4>
-                            <p className="text-xs text-white/30 font-medium">Mirroring the Frontier model, we facilitate advance market commitments from food giants to de-risk infrastructure deployment.</p>
-                         </div>
-                      </div>
-                   </div>
-                   <Button className="h-14 px-10 rounded-full bg-white text-black hover:bg-green-500 transition-all font-black text-[10px] uppercase tracking-widest">
-                      Explore Catalyst Model
-                   </Button>
-              </div>
-           </div>
-        </section>
-
         {/* LIVE IMPACT METRICS - THESSCOMPOST */}
         <section className="py-20 border-y border-white/5">
            <div className="text-center space-y-6 mb-16">
