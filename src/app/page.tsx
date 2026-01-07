@@ -204,7 +204,9 @@ export default function Home() {
                   transition={{ delay: 0.2 }}
                   className="max-w-2xl text-xl text-white/50 leading-relaxed font-medium"
                 >
-                  Grow Carbon is a global provider of regenerative infrastructure solutions, connecting the world’s organic resource cycles through integrated environmental, biological, and digital technologies. We are building a distributed network of hubs to solve the twin crises of landfill saturation and soil degradation.
+                  Grow Carbon is a global provider of regenerative infrastructure solutions, connecting the world’s organic resource cycles through its integrated environmental, biological, and digital technologies. We are building a distributed network of organic resource management hubs designed to solve the twin crises of landfill saturation and soil degradation.
+                  <br /><br />
+                  By leveraging state-of-the-art cleantech (Compost Systems GmbH) and a proprietary digital traceability layer (Wastecloud™), Grow Carbon transforms organic liabilities into hyper-stabilized compost and verifiable carbon assets.
                 </motion.p>
               </div>
 
