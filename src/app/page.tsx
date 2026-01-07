@@ -22,7 +22,9 @@ import {
   TrendingUp,
   Users,
   Droplets,
-  HardDrive
+  HardDrive,
+  MapPin,
+  Phone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
