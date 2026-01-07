@@ -310,12 +310,12 @@ export default function Home() {
                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                  <div className="space-y-8 relative z-10">
                     <div className="space-y-4">
-                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-green-500">The Solution</span>
+                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-green-500">• The Solution</span>
                        <h3 className="text-3xl font-bold italic tracking-tighter">A decentralized network of "Micro-Hubs" that process organic waste at the source.</h3>
                     </div>
                     <div className="h-px w-20 bg-green-500" />
                     <div className="space-y-4">
-                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">The Result</span>
+                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">• The Result</span>
                        <p className="text-sm text-white/60 font-medium">We provide waste producers with a low-carbon disposal alternative and food producers with the biological inputs required for regenerative agriculture.</p>
                     </div>
                  </div>
