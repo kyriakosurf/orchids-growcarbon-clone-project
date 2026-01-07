@@ -192,18 +192,19 @@ export default function Home() {
                   transition={{ delay: 0.1 }}
                   className="text-6xl md:text-8xl font-bold tracking-tight leading-[0.85]"
                 >
-                  Architecting the <br />
-                  <span className="text-white/40 italic">Circular</span> <br />
-                  Bioeconomy.
+                  Architecting <br />
+                  Global <br />
+                  <span className="text-white/40 italic">Regenerative</span> <br />
+                  Infrastructure.
                 </motion.h1>
 
                 <motion.p 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="max-w-xl text-xl text-white/50 leading-relaxed font-medium"
+                  className="max-w-2xl text-xl text-white/50 leading-relaxed font-medium"
                 >
-                  We transform organic liabilities into high-value regenerative assets through a distributed network of decentralized Bio-Hubs.
+                  Grow Carbon is a global provider of regenerative infrastructure solutions, connecting the world’s organic resource cycles through integrated environmental, biological, and digital technologies. We are building a distributed network of hubs to solve the twin crises of landfill saturation and soil degradation.
                 </motion.p>
               </div>
 
