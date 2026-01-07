@@ -308,11 +308,17 @@ export default function Home() {
                  </div>
               </div>
               <div className="aspect-square bg-white/5 rounded-3xl border border-white/10 flex flex-col p-12 justify-center relative overflow-hidden group">
-                 <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                 <div className="space-y-6 relative z-10">
-                    <h3 className="text-3xl font-bold italic tracking-tighter">"The linear model is a financial and ecological dead end."</h3>
-                    <div className="h-px w-20 bg-red-500" />
-                    <p className="text-sm text-white/60 font-medium">We transition from Liability management to Asset creation by closing the nutrient loop at industrial scale.</p>
+                 <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                 <div className="space-y-8 relative z-10">
+                    <div className="space-y-4">
+                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-green-500">The Solution</span>
+                       <h3 className="text-3xl font-bold italic tracking-tighter">Decentralized "Micro-Hubs" processing organic waste at the source.</h3>
+                    </div>
+                    <div className="h-px w-20 bg-green-500" />
+                    <div className="space-y-4">
+                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">The Result</span>
+                       <p className="text-sm text-white/60 font-medium">Providing low-carbon disposal for waste producers and essential biological inputs for regenerative food production.</p>
+                    </div>
                  </div>
                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] pointer-events-none opacity-20">
                     <svg viewBox="0 0 100 100" className="w-full h-full animate-[spin_60s_linear_infinite]">
