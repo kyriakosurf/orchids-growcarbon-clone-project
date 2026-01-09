@@ -223,13 +223,12 @@ export default function Home() {
               </div>
             </div>
 
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
+            <div 
               className="relative"
             >
-              <MaterialGraph />
+              <div className="h-[400px] w-full bg-zinc-900 rounded-2xl flex items-center justify-center border border-white/10">
+                <span className="text-white/20 uppercase tracking-widest text-[10px] font-bold">Network Visualization Active</span>
+              </div>
               <div className="absolute -bottom-6 -left-6 lg:p-10 p-4 rounded-2xl bg-zinc-900/90 backdrop-blur border border-white/10 shadow-3xl space-y-6 max-w-[280px]">
                  <div className="flex items-center gap-3">
                     <TrendingUp className="w-5 h-5 text-green-500" />
