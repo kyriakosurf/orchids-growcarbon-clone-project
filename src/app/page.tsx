@@ -121,10 +121,9 @@ const TECH_STACK = [
 ];
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) return null;
+  useEffect(() => {
+    console.log("Grow Carbon App Mounted");
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#020202] text-white selection:bg-green-500/30 font-[family-name:var(--font-geist-sans)] selection:text-green-400">
