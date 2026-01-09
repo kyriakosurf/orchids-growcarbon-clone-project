@@ -176,8 +176,6 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-24 items-center">
             <div className="space-y-12">
               <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
                 className="inline-flex items-center gap-3 px-5 py-2 rounded bg-green-500/5 border border-green-500/20"
               >
                 <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse" />
@@ -186,9 +184,6 @@ export default function Home() {
 
               <div className="space-y-6">
                 <motion.h1 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
                   className="text-6xl md:text-8xl font-bold tracking-tight leading-[0.85]"
                 >
                   Architecting <br />
@@ -198,9 +193,6 @@ export default function Home() {
                 </motion.h1>
 
                 <motion.p 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
                   className="max-w-2xl text-xl text-white/50 leading-relaxed font-medium"
                 >
                   Grow Carbon is a global provider of regenerative infrastructure solutions, connecting the world’s organic resource cycles through its integrated environmental, biological, and digital technologies. We are building a distributed network of organic resource management hubs designed to solve the twin crises of landfill saturation and soil degradation.
@@ -210,9 +202,6 @@ export default function Home() {
               </div>
 
               <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-5"
               >
                 <Button size="lg" className="h-16 rounded bg-green-600 text-white hover:bg-green-500 transition-all font-bold px-10 group text-[11px] uppercase tracking-widest">
