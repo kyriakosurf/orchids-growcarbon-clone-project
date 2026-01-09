@@ -1,27 +1,16 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { 
   Globe2, 
-  Database, 
-  Terminal, 
-  Cpu, 
-  Network, 
-  Layers, 
-  BarChart3, 
-    RefreshCcw,
-    Activity,
-    ArrowRight,
-    Maximize2,
-    Box,
-    Monitor,
-    Sprout,
-    ShieldCheck,
+  Activity,
+  ArrowRight,
+  Box,
+  Sprout,
+  ShieldCheck,
   Factory,
   TrendingUp,
-  Users,
-  Droplets,
   HardDrive,
   MapPin,
   Phone
@@ -99,7 +88,6 @@ const TECH_STACK = [
     category: "Infrastructure",
     desc: "Leveraging state-of-the-art cleantech from Compost Systems GmbH to transform organic liabilities into hyper-stabilized compost assets.",
     icon: <Factory className="w-5 h-5" />,
-    colSpan: "col-span-1",
     bg: "from-green-500/10 to-emerald-500/10"
   },
   {
@@ -107,7 +95,6 @@ const TECH_STACK = [
     category: "Wastecloud™ Platform",
     desc: "Our proprietary Wastecloud™ traceability layer generates verifiable carbon assets and closes the ESG reporting gap with immutable data.",
     icon: <HardDrive className="w-5 h-5" />,
-    colSpan: "col-span-1",
     bg: "from-blue-500/10 to-green-500/10"
   },
   {
@@ -115,7 +102,6 @@ const TECH_STACK = [
     category: "Catalytic Partnerships",
     desc: "Big organic waste producers, multinational food companies and agri sector chemical companies support the Bio-HUB network to transition to regenerative food production.",
     icon: <Globe2 className="w-5 h-5" />,
-    colSpan: "col-span-1",
     bg: "from-yellow-500/10 to-green-500/10"
   }
 ];
@@ -126,7 +112,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#020202] text-white selection:bg-green-500/30 font-[family-name:var(--font-geist-sans)] selection:text-green-400">
+    <div className="min-h-screen bg-[#020202] text-white selection:bg-green-500/30 font-sans selection:text-green-400">
       {/* UI Shell */}
       <div className="fixed inset-0 pointer-events-none z-[100] border-[1px] border-white/5 mix-blend-overlay opacity-30" />
       <div className="fixed inset-0 pointer-events-none z-[100] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 contrast-125" />
@@ -143,11 +129,11 @@ export default function Home() {
               <span className="text-[8px] font-bold text-green-500 uppercase tracking-widest leading-none mt-1">Industrial Regeneration</span>
             </div>
           </div>
-                <div className="hidden lg:flex items-center gap-10">
-                  {['Bio Hub Network', 'Technology', 'Initiatives'].map((item) => (
-                    <a key={item} href="#" className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/40 hover:text-white transition-colors">{item}</a>
-                  ))}
-                </div>
+          <div className="hidden lg:flex items-center gap-10">
+            {['Bio Hub Network', 'Technology', 'Initiatives'].map((item) => (
+              <a key={item} href="#" className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/40 hover:text-white transition-colors">{item}</a>
+            ))}
+          </div>
         </div>
         <div className="flex items-center gap-6">
           <div className="hidden xl:flex items-center gap-6 mr-6 border-r border-white/10 pr-6">
@@ -170,45 +156,37 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="pt-40 max-w-7xl mx-auto space-y-40 px-6">
+      <main className="pt-40 max-w-7xl mx-auto space-y-40 px-6 pb-40">
         {/* HERO SECTION */}
         <section className="relative">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
             <div className="space-y-12">
-              <motion.div 
-                className="inline-flex items-center gap-3 px-5 py-2 rounded bg-green-500/5 border border-green-500/20"
-              >
+              <div className="inline-flex items-center gap-3 px-5 py-2 rounded bg-green-500/5 border border-green-500/20">
                 <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-[9px] font-black uppercase tracking-[0.25em] text-green-500">Status: Infrastructure Layer Active</span>
-              </motion.div>
+              </div>
 
               <div className="space-y-6">
-                <motion.h1 
-                  className="text-6xl md:text-8xl font-bold tracking-tight leading-[0.85]"
-                >
+                <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-[0.85]">
                   Architecting <br />
                   Global <br />
                   <span className="text-white/40 italic">Regenerative</span> <br />
                   Infrastructure.
-                </motion.h1>
+                </h1>
 
-                <motion.p 
-                  className="max-w-2xl text-xl text-white/50 leading-relaxed font-medium"
-                >
+                <p className="max-w-2xl text-xl text-white/50 leading-relaxed font-medium">
                   Grow Carbon is a global provider of regenerative infrastructure solutions, connecting the world’s organic resource cycles through its integrated environmental, biological, and digital technologies. We are building a distributed network of organic resource management hubs designed to solve the twin crises of landfill saturation and soil degradation.
                   <br /><br />
                   By leveraging state-of-the-art cleantech (Compost Systems GmbH) and a proprietary digital traceability layer (Wastecloud™), Grow Carbon transforms organic liabilities into hyper-stabilized compost and verifiable carbon assets.
-                </motion.p>
+                </p>
               </div>
 
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-5"
-              >
+              <div className="flex flex-col sm:flex-row gap-5">
                 <Button size="lg" className="h-16 rounded bg-green-600 text-white hover:bg-green-500 transition-all font-bold px-10 group text-[11px] uppercase tracking-widest">
                   Join The Network
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </motion.div>
+              </div>
 
               <div className="grid grid-cols-2 gap-10 pt-10 border-t border-white/5">
                 {[
@@ -223,9 +201,7 @@ export default function Home() {
               </div>
             </div>
 
-            <motion.div 
-              className="relative"
-            >
+            <div className="relative">
               <MaterialGraph />
               <div className="absolute -bottom-6 -left-6 lg:p-10 p-4 rounded-2xl bg-zinc-900/90 backdrop-blur border border-white/10 shadow-3xl space-y-6 max-w-[280px]">
                  <div className="flex items-center gap-3">
@@ -253,7 +229,7 @@ export default function Home() {
                     </div>
                  </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -276,7 +252,7 @@ export default function Home() {
                     </div>
                     <div className="space-y-4">
                        <div className="h-12 w-12 rounded bg-red-500/10 flex items-center justify-center text-red-500">
-                          <Droplets className="w-6 h-6" />
+                          <Sprout className="w-6 h-6" />
                        </div>
                        <h4 className="font-bold text-sm uppercase tracking-wider">Chemical Dependency</h4>
                        <p className="text-xs text-white/40 leading-relaxed">Industrial farming relies on synthetic fertilizers that degrade soil health and pollute waterways.</p>
@@ -354,119 +330,6 @@ export default function Home() {
           </div>
         </section>
 
-          {/* VERIFICATION & TRUST: ANALYTICS TECHNOLOGY */}
-          <section className="rounded-[60px] bg-gradient-to-br from-[#0c0c0c] to-black border border-white/5 p-12 lg:p-24 relative overflow-hidden group">
-             <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 opacity-20 pointer-events-none">
-                <div className="w-[800px] h-[800px] rounded-full border border-white/5 animate-[pulse_10s_ease-in-out_infinite]" />
-             </div>
-             
-             <div className="grid lg:grid-cols-2 gap-24 relative z-10">
-                <div className="space-y-10">
-                   <div className="bg-blue-500/10 text-blue-400 px-5 py-2 rounded-full inline-flex items-center gap-2 border border-blue-500/20">
-                      <ShieldCheck className="w-4 h-4" />
-                      <span className="text-[10px] font-black uppercase tracking-widest">Deep Tech KPIs: Core Technology</span>
-                   </div>
-                 <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter leading-[0.9]">
-                   Catalytic <br />
-                   Verification.
-                 </h2>
-                 <p className="text-white/40 text-xl font-medium max-w-lg leading-relaxed">
-                   Inspired by the Frontier model, we enable advanced market commitments for regenerative soil. Our technology provides the immutable data needed to de-risk high-integrity carbon removal.
-                 </p>
-                   <div className="grid grid-cols-2 gap-x-12 gap-y-6 pt-6">
-                      {[
-                        'Real-time Nutrient Analysis',
-                        'Satellite Carbon Auditing',
-                        'IoT Bio-Hub Mesh',
-                        'Fractional Asset Registry'
-                      ].map((item, i) => (
-                        <div key={i} className="flex items-center gap-4 group/item cursor-pointer">
-                           <div className="h-px w-4 bg-green-500/50 group-hover/item:w-8 transition-all" />
-                           <span className="text-xs font-bold text-white/60 uppercase tracking-widest">{item}</span>
-                        </div>
-                      ))}
-                   </div>
-                </div>
-
-              <div className="rounded-3xl border border-white/10 bg-black/50 p-8 backdrop-blur shadow-2xl relative overflow-hidden group/console">
-                 <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
-                    <div className="flex gap-2">
-                       <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em]">Live Data Stream</span>
-                    </div>
-                     <div className="flex items-center gap-2">
-                       <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                       <span className="text-blue-500 text-[10px] font-bold uppercase tracking-widest underline underline-offset-4 cursor-pointer">Infrastructure Hub v2.01</span>
-                    </div>
-                 </div>
-                 <div className="space-y-6 font-mono text-[12px]">
-                    <div className="p-4 rounded bg-white/5 border border-white/5 space-y-3">
-                       <div className="flex justify-between">
-                          <span className="text-white/40">Timestamp</span>
-                          <span>2024.10.24 14:24:01</span>
-                       </div>
-                       <div className="flex justify-between">
-                          <span className="text-white/40">Hub ID</span>
-                          <span className="text-blue-400">HUB-TX-441-A</span>
-                       </div>
-                    </div>
-                    
-                    <div className="space-y-4 pl-2 border-l border-white/10">
-                       <div className="flex items-center gap-4">
-                          <div className="h-10 w-full relative bg-white/5 rounded overflow-hidden">
-                             <motion.div animate={{ width: ["10%", "92%", "88%"] }} transition={{ duration: 5, repeat: Infinity }} className="h-full bg-gradient-to-r from-blue-500 to-green-500" />
-                             <span className="absolute inset-y-0 left-3 flex items-center text-[9px] font-bold text-white/80 uppercase">Sequestration Rate</span>
-                          </div>
-                          <span className="text-white/60">0.94t/h</span>
-                       </div>
-                       <div className="flex items-center gap-4">
-                          <div className="h-10 w-full relative bg-white/5 rounded overflow-hidden">
-                             <motion.div animate={{ width: ["40%", "75%", "70%"] }} transition={{ duration: 7, repeat: Infinity }} className="h-full bg-gradient-to-r from-blue-500 to-indigo-500" />
-                             <span className="absolute inset-y-0 left-3 flex items-center text-[9px] font-bold text-white/80 uppercase">Nutrient Purity</span>
-                          </div>
-                          <span className="text-white/60">98.2%</span>
-                       </div>
-                    </div>
-                    
-                    <div className="flex gap-4 pt-4 border-t border-white/5">
-                       <span className="text-blue-500/60">$</span>
-                       <span className="text-white/40">generating_soil_carbon_certificate...</span>
-                    </div>
-                    <div className="h-px w-full bg-white/5" />
-                    <div className="flex justify-between items-center text-[10px] font-bold uppercase tracking-widest text-green-500">
-                       <span>Certificate #441-A-Z</span>
-                       <span>DEEP TRUST SECURE</span>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </section>
-
-        {/* LIVE IMPACT METRICS - THESSCOMPOST */}
-        <section className="py-20 border-y border-white/5">
-           <div className="text-center space-y-6 mb-16">
-              <div className="inline-flex items-center gap-3 px-5 py-2 rounded bg-green-500/5 border border-green-500/20">
-                 <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse" />
-                 <span className="text-[9px] font-black uppercase tracking-[0.25em] text-green-500">Live Data: Thesscompost Hub</span>
-              </div>
-              <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">Real-Time Impact Metrics</h2>
-              <p className="text-white/40 text-lg max-w-2xl mx-auto">Transparent, verifiable data from our operational Bio-Hub network.</p>
-           </div>
-           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                 { value: '2,847', label: 'Tons Diverted', suffix: 't', change: '+12% MoM' },
-                 { value: '1,240', label: 'CO₂ Sequestered', suffix: 't', change: '+8% MoM' },
-                 { value: '45,000', label: 'Liters Water Saved', suffix: '/ha', change: 'Per Hectare' },
-                 { value: '98.4', label: 'Hub Efficiency', suffix: '%', change: 'System Avg' },
-              ].map((metric, i) => (
-                 <div key={i} className="p-8 rounded-3xl border border-white/5 bg-white/[0.02] space-y-4 text-center">
-                    <p className="text-4xl lg:text-5xl font-black">{metric.value}<span className="text-lg text-green-500">{metric.suffix}</span></p>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-white/30">{metric.label}</p>
-                    <p className="text-[9px] font-mono text-green-500/60">{metric.change}</p>
-                 </div>
-              ))}
-           </div>
-        </section>
-
         {/* STAKEHOLDERS SECTION */}
         <section className="bg-white/[0.02] border border-white/5 rounded-[50px] p-12 lg:p-24 space-y-20">
            <div className="max-w-3xl space-y-6">
@@ -474,46 +337,46 @@ export default function Home() {
              <p className="text-white/40 text-xl font-medium">A multi-stakeholder model optimized for planetary health and resource resilience.</p>
            </div>
            
-               <div className="grid md:grid-cols-4 gap-10">
-                {[
-                   { 
-                     role: "Hotels & Hospitality", 
-                     desc: "Seamless, compliant waste diversion. Transform kitchen and organic waste into a verified sustainability asset.",
-                     benefit: "Compliant Waste Diversion",
-                     icon: <Box className="w-8 h-8" />
-                   },
-                   { 
-                     role: "Farmers & Growers", 
-                     desc: "Access highly stabilized compost for soil resilience. Reduce chemical dependency while improving yields and water retention.",
-                     benefit: "Soil Resilience & Yield",
-                     icon: <Sprout className="w-8 h-8" />
-                   },
-                   { 
-                     role: "Corporates & ESG", 
-                     desc: "Verifiable Scope 3 emissions reduction data. Close the traceability gap with immutable, auditable impact metrics.",
-                     benefit: "Verified Scope 3 Data",
-                     icon: <ShieldCheck className="w-8 h-8" />
-                   },
-                   { 
-                     role: "Food & Agri-Chem Giants", 
-                     desc: "Support the transition to climate resilient, regenerative food production by backing our Bio-HUB network development.",
-                     benefit: "Regenerative Transition",
-                     icon: <Globe2 className="w-8 h-8" />
-                   }
-                ].map((stake, i) => (
-                 <div key={i} className="space-y-8 group">
-                    <div className="h-16 w-16 rounded-2xl bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-green-500 group-hover:text-black transition-all">
-                       {stake.icon}
-                    </div>
-                    <div className="space-y-4">
-                       <h3 className="text-2xl font-bold italic tracking-tighter">{stake.role}</h3>
-                       <p className="text-sm text-white/40 leading-relaxed font-medium">{stake.desc}</p>
-                    </div>
-                    <div className="p-4 rounded-xl bg-white/5 border border-white/5">
-                       <span className="text-[10px] font-black text-green-500 uppercase tracking-[0.2em]">{stake.benefit}</span>
-                    </div>
-                 </div>
-              ))}
+           <div className="grid md:grid-cols-4 gap-10">
+            {[
+               { 
+                 role: "Hotels & Hospitality", 
+                 desc: "Seamless, compliant waste diversion. Transform kitchen and organic waste into a verified sustainability asset.",
+                 benefit: "Compliant Waste Diversion",
+                 icon: <Box className="w-8 h-8" />
+               },
+               { 
+                 role: "Farmers & Growers", 
+                 desc: "Access highly stabilized compost for soil resilience. Reduce chemical dependency while improving yields and water retention.",
+                 benefit: "Soil Resilience & Yield",
+                 icon: <Sprout className="w-8 h-8" />
+               },
+               { 
+                 role: "Corporates & ESG", 
+                 desc: "Verifiable Scope 3 emissions reduction data. Close the traceability gap with immutable, auditable impact metrics.",
+                 benefit: "Verified Scope 3 Data",
+                 icon: <ShieldCheck className="w-8 h-8" />
+               },
+               { 
+                 role: "Food & Agri-Chem Giants", 
+                 desc: "Support the transition to climate resilient, regenerative food production by backing our Bio-HUB network development.",
+                 benefit: "Regenerative Transition",
+                 icon: <Globe2 className="w-8 h-8" />
+               }
+            ].map((stake, i) => (
+             <div key={i} className="space-y-8 group">
+                <div className="h-16 w-16 rounded-2xl bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-green-500 group-hover:text-black transition-all">
+                   {stake.icon}
+                </div>
+                <div className="space-y-4">
+                   <h3 className="text-2xl font-bold italic tracking-tighter">{stake.role}</h3>
+                   <p className="text-sm text-white/40 leading-relaxed font-medium">{stake.desc}</p>
+                </div>
+                <div className="p-4 rounded-xl bg-white/5 border border-white/5">
+                   <span className="text-[10px] font-black text-green-500 uppercase tracking-[0.2em]">{stake.benefit}</span>
+                </div>
+             </div>
+          ))}
            </div>
         </section>
       </main>
