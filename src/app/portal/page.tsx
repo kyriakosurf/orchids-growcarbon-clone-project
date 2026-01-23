@@ -13,10 +13,13 @@ import {
   TrendingUp,
   HardDrive,
   MapPin,
-  Phone
+  Phone,
+  LogOut,
+  User
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { createClient } from "@/lib/supabase/client";
 
 const MaterialGraph = () => {
   return (
@@ -107,10 +110,23 @@ const TECH_STACK = [
   }
 ];
 
-export default function Home() {
+export default function PortalPage() {
+  const [user, setUser] = useState<any>(null);
+  const router = useRouter();
+  const supabase = createClient();
+
   useEffect(() => {
-    console.log("Grow Carbon App Mounted");
-  }, []);
+    const getUser = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      setUser(user);
+    };
+    getUser();
+  }, [supabase]);
+
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+    router.push("/");
+  };
 
   return (
     <div className="min-h-screen bg-[#020202] text-white selection:bg-green-500/30 font-sans selection:text-green-400">
@@ -137,6 +153,12 @@ export default function Home() {
           </div>
         </div>
         <div className="flex items-center gap-6">
+          {user && (
+            <div className="hidden md:flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+              <User className="w-3 h-3 text-green-500" />
+              <span className="text-[9px] font-black uppercase tracking-widest text-white/60">{user.email}</span>
+            </div>
+          )}
           <div className="hidden xl:flex items-center gap-6 mr-6 border-r border-white/10 pr-6">
              <div className="flex flex-col items-end">
                <span className="text-[9px] font-mono text-white/30 uppercase tracking-widest">Global Carbon Sync</span>
@@ -148,11 +170,14 @@ export default function Home() {
                </div>
              </div>
           </div>
-          <Link href="/">
-            <Button variant="ghost" className="text-[10px] font-bold uppercase tracking-widest text-white/60 hover:text-white hover:bg-white/5 px-4 h-10">
-              System Exit
-            </Button>
-          </Link>
+          <Button 
+            variant="ghost" 
+            onClick={handleSignOut}
+            className="text-[10px] font-bold uppercase tracking-widest text-white/60 hover:text-red-500 hover:bg-red-500/5 px-4 h-10"
+          >
+            <LogOut className="w-3 h-3 mr-2" />
+            System Exit
+          </Button>
           <Button className="h-10 rounded bg-white text-[10px] font-bold uppercase tracking-widest hover:bg-green-500 text-black px-8 transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]">
             Partner With Us
           </Button>
