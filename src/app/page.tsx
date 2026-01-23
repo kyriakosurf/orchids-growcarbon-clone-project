@@ -227,7 +227,9 @@ export default function LandingPage() {
                     </button>
                     <button 
                       type="button"
-                      className="text-[10px] font-black uppercase tracking-widest text-white/20 hover:text-white transition-colors"
+                      onClick={handleResetPassword}
+                      disabled={loading}
+                      className="text-[10px] font-black uppercase tracking-widest text-white/20 hover:text-white transition-colors disabled:opacity-50"
                     >
                       Reset Sync
                     </button>
