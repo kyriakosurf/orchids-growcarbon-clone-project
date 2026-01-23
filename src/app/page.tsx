@@ -67,6 +67,27 @@ export default function LandingPage() {
     setLoading(false);
   };
 
+  const handleResetPassword = async () => {
+    if (!email) {
+      setMessage({ type: 'error', text: "Please enter your email identifier to reset sync." });
+      return;
+    }
+
+    setLoading(true);
+    setMessage(null);
+
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/auth/callback?next=/portal`,
+    });
+
+    if (error) {
+      setMessage({ type: 'error', text: error.message });
+    } else {
+      setMessage({ type: 'success', text: "Reset instructions sent to your email." });
+    }
+    setLoading(false);
+  };
+
   return (
     <div className="min-h-screen bg-[#020202] text-white selection:bg-green-500/30 font-sans selection:text-green-400 overflow-hidden">
       {/* Background Effects */}
