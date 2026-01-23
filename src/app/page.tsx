@@ -95,6 +95,7 @@ export default function LandingPage() {
               <div className="relative p-10 rounded-[24px] bg-zinc-900/80 backdrop-blur-xl border border-white/10 space-y-8">
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold tracking-tight">Access Portal</h3>
+                  <p className="text-xs text-white/60 leading-relaxed">Grow Carbon is currently at stealth mode. Authorised access only.</p>
                   <p className="text-xs text-white/40 uppercase tracking-widest font-black">Authorized Personnel Only</p>
                 </div>
 
