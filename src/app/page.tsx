@@ -9,13 +9,63 @@ import {
   Globe2, 
   Lock,
   Mail,
-  Zap
+  Zap,
+  Loader2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { createClient } from "@/lib/supabase/client";
 
 export default function LandingPage() {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState<{ type: 'error' | 'success', text: string } | null>(null);
+  const router = useRouter();
+  const supabase = createClient();
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage(null);
+
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      setMessage({ type: 'error', text: error.message });
+      setLoading(false);
+    } else {
+      router.push("/portal");
+    }
+  };
+
+  const handleRequestAccess = async () => {
+    if (!email || !password) {
+      setMessage({ type: 'error', text: "Please provide both email and token (password) to request access." });
+      return;
+    }
+    
+    setLoading(true);
+    setMessage(null);
+
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
+      },
+    });
+
+    if (error) {
+      setMessage({ type: 'error', text: error.message });
+    } else {
+      setMessage({ type: 'success', text: "Access request sent. Please check your email for verification." });
+    }
+    setLoading(false);
+  };
 
   return (
     <div className="min-h-screen bg-[#020202] text-white selection:bg-green-500/30 font-sans selection:text-green-400 overflow-hidden">
@@ -44,7 +94,7 @@ export default function LandingPage() {
             </div>
             <div className="text-center space-y-2">
               <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-green-500">System Gateway</h2>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase italic">Grow Carbon</h1>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase">Grow Carbon</h1>
             </div>
           </motion.div>
 
@@ -92,11 +142,17 @@ export default function LandingPage() {
               className="relative group"
             >
               <div className="absolute -inset-4 bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-[32px] blur-2xl opacity-50 group-hover:opacity-100 transition-opacity" />
-              <div className="relative p-10 rounded-[24px] bg-zinc-900/80 backdrop-blur-xl border border-white/10 space-y-8">
+              <form onSubmit={handleLogin} className="relative p-10 rounded-[24px] bg-zinc-900/80 backdrop-blur-xl border border-white/10 space-y-8">
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold tracking-tight">Access Portal</h3>
                   <p className="text-xs text-white/40 uppercase tracking-widest font-black">GROW CARBON IS CURRENTLY AT STEALTH MODE. AUTHORISED ACCESS ONLY.</p>
                 </div>
+
+                {message && (
+                  <div className={`p-3 rounded-lg text-xs font-bold uppercase tracking-wider ${message.type === 'error' ? 'bg-red-500/10 text-red-500 border border-red-500/20' : 'bg-green-500/10 text-green-500 border border-green-500/20'}`}>
+                    {message.text}
+                  </div>
+                )}
 
                 <div className="space-y-4">
                   <div className="space-y-2">
@@ -105,6 +161,7 @@ export default function LandingPage() {
                       <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
                       <input 
                         type="email" 
+                        required
                         placeholder="name@organization.com"
                         className="w-full h-14 bg-black/50 border border-white/10 rounded-xl pl-12 pr-4 text-sm focus:outline-none focus:border-green-500/50 transition-colors"
                         value={email}
@@ -119,26 +176,43 @@ export default function LandingPage() {
                       <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
                       <input 
                         type="password" 
+                        required
                         placeholder="••••••••"
                         className="w-full h-14 bg-black/50 border border-white/10 rounded-xl pl-12 pr-4 text-sm focus:outline-none focus:border-green-500/50 transition-colors"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                       />
                     </div>
                   </div>
                 </div>
 
                 <div className="space-y-4 pt-4">
-                  <Link href="/portal">
-                    <Button className="w-full h-14 bg-white text-black hover:bg-green-500 font-black uppercase tracking-[0.2em] text-[11px] transition-all rounded-xl">
-                      Initialize Session
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
+                  <Button 
+                    type="submit"
+                    disabled={loading}
+                    className="w-full h-14 bg-white text-black hover:bg-green-500 font-black uppercase tracking-[0.2em] text-[11px] transition-all rounded-xl disabled:opacity-50"
+                  >
+                    {loading ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : "Initialize Session"}
+                    {!loading && <ArrowRight className="w-4 h-4 ml-2" />}
+                  </Button>
                   <div className="flex justify-between px-2">
-                    <button className="text-[10px] font-black uppercase tracking-widest text-white/20 hover:text-white transition-colors">Request Access</button>
-                    <button className="text-[10px] font-black uppercase tracking-widest text-white/20 hover:text-white transition-colors">Reset Sync</button>
+                    <button 
+                      type="button"
+                      onClick={handleRequestAccess}
+                      disabled={loading}
+                      className="text-[10px] font-black uppercase tracking-widest text-white/20 hover:text-white transition-colors disabled:opacity-50"
+                    >
+                      Request Access
+                    </button>
+                    <button 
+                      type="button"
+                      className="text-[10px] font-black uppercase tracking-widest text-white/20 hover:text-white transition-colors"
+                    >
+                      Reset Sync
+                    </button>
                   </div>
                 </div>
-              </div>
+              </form>
             </motion.div>
 
           </div>
