@@ -1,20 +1,17 @@
 import { createClient } from "@supabase/supabase-js";
 import { NextRequest, NextResponse } from "next/server";
 
-const ADMIN_SECRET = process.env.SUPABASE_SERVICE_ROLE_KEY!;
-
 function getAdminClient() {
   return createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    ADMIN_SECRET,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
     { auth: { autoRefreshToken: false, persistSession: false } }
   );
 }
 
-// Simple admin auth: check that the request includes the service role key
 function isAuthorized(req: NextRequest) {
   const authHeader = req.headers.get("x-admin-key");
-  return authHeader === ADMIN_SECRET;
+  return authHeader === process.env.ADMIN_SECRET;
 }
 
 // GET /api/admin/users - List all users
