@@ -42,31 +42,6 @@ export default function LandingPage() {
     }
   };
 
-  const handleRequestAccess = async () => {
-    if (!email || !password) {
-      setMessage({ type: 'error', text: "Please provide both email and token (password) to request access." });
-      return;
-    }
-    
-    setLoading(true);
-    setMessage(null);
-
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback`,
-      },
-    });
-
-    if (error) {
-      setMessage({ type: 'error', text: error.message });
-    } else {
-      setMessage({ type: 'success', text: "Access request sent. Please check your email for verification." });
-    }
-    setLoading(false);
-  };
-
   const handleResetPassword = async () => {
     if (!email) {
       setMessage({ type: 'error', text: "Please enter your email identifier to reset sync." });
