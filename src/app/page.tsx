@@ -191,24 +191,16 @@ export default function LandingPage() {
                     {loading ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : "Initialize Session"}
                     {!loading && <ArrowRight className="w-4 h-4 ml-2" />}
                   </Button>
-                  <div className="flex justify-between px-2">
-                    <button 
-                      type="button"
-                      onClick={handleRequestAccess}
-                      disabled={loading}
-                      className="text-[10px] font-black uppercase tracking-widest text-white/20 hover:text-white transition-colors disabled:opacity-50"
-                    >
-                      Request Access
-                    </button>
-                    <button 
-                      type="button"
-                      onClick={handleResetPassword}
-                      disabled={loading}
-                      className="text-[10px] font-black uppercase tracking-widest text-white/20 hover:text-white transition-colors disabled:opacity-50"
-                    >
-                      Reset Sync
-                    </button>
-                  </div>
+                    <div className="flex justify-center px-2">
+                      <button 
+                        type="button"
+                        onClick={handleResetPassword}
+                        disabled={loading}
+                        className="text-[10px] font-black uppercase tracking-widest text-white/20 hover:text-white transition-colors disabled:opacity-50"
+                      >
+                        Reset Sync
+                      </button>
+                    </div>
                 </div>
               </form>
             </motion.div>
