@@ -25,7 +25,7 @@ interface User {
 }
 
 export default function AdminPage() {
-  const [adminKey, setAdminKey] = useState("");
+  const [adminKey] = useState("open");
   const [authenticated, setAuthenticated] = useState(false);
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(false);
@@ -57,22 +57,11 @@ export default function AdminPage() {
     }
   }, [adminKey]);
 
-  const handleAuth = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    setLoading(true);
-    try {
-      const res = await fetch("/api/admin/users", { headers: { "x-admin-key": adminKey } });
-      if (!res.ok) throw new Error("Invalid admin key");
-      const data = await res.json();
-      setUsers(data.users);
-      setAuthenticated(true);
-    } catch {
-      setError("Invalid admin key. Access denied.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  // Auto-authenticate on load
+  React.useEffect(() => {
+    fetchUsers("open").then(() => setAuthenticated(true));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleCreateUser = async (e: React.FormEvent) => {
     e.preventDefault();
