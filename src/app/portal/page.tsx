@@ -149,9 +149,11 @@ export default function PortalPage() {
               Home
             </Button>
           </Link>
-          <Button className="h-10 rounded bg-white text-[10px] font-bold uppercase tracking-widest hover:bg-green-500 text-black px-8 transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]">
-            Partner With Us
-          </Button>
+          <a href="mailto:info@growcarbon.eu">
+            <Button className="h-10 rounded bg-white text-[10px] font-bold uppercase tracking-widest hover:bg-green-500 text-black px-8 transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+              Partner With Us
+            </Button>
+          </a>
         </div>
       </nav>
 
