@@ -117,7 +117,7 @@ export default function GrowCarbonLanding() {
             Grow<span className="text-[#d4a017]">Carbon</span>
           </h1>
           <p className="text-[10px] uppercase tracking-[0.3em] text-white font-medium mt-3">
-            Regenerative Industrial Infrastructure · Greece
+            Regenerative Industrial Infrastructure
           </p>
         </div>
 
@@ -206,10 +206,18 @@ export default function GrowCarbonLanding() {
         </section>
 
         {/* Footer */}
-        <div className="w-full h-[0.5px] bg-[#d4a017]/30 mt-20 mb-10" />
-        <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 text-center font-medium">
-          © 2025 Grow Carbon Infrastructure Group
-        </p>
+        <div className="w-full h-[0.5px] bg-[#d4a017]/30 mt-20 mb-8" />
+        <div className="space-y-4 text-center">
+          <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium">
+            Mitropoleos 51, 54623 Thessaloniki, Greece
+          </p>
+          <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium">
+            A <a href="https://mellonlabs.eu" target="_blank" rel="noopener noreferrer" className="text-[#d4a017] hover:text-white transition-colors">Mellon Labs</a> company
+          </p>
+          <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 text-center font-medium pt-2">
+            © 2025 Grow Carbon Infrastructure Group
+          </p>
+        </div>
       </main>
     </div>
   );
