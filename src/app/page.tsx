@@ -116,10 +116,10 @@ export default function GrowCarbonLanding() {
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight flex items-center">
             Grow
             <span className="text-[#d4a017] inline-flex items-center">
-              <svg viewBox="0 0 9 9" className="h-[1.2em] w-[1.2em] inline-block" fill="none">
-                <rect x="3" y="0" width="3" height="3" fill="currentColor" />
-                <rect x="0" y="3" width="3" height="3" fill="currentColor" />
-                <rect x="3" y="6" width="3" height="3" fill="currentColor" />
+              <svg viewBox="0 0 6 6" className="h-[1em] w-[1em]" fill="none">
+                <rect x="2" y="0" width="2" height="2" fill="currentColor" />
+                <rect x="0" y="2" width="2" height="2" fill="currentColor" />
+                <rect x="2" y="4" width="2" height="2" fill="currentColor" />
               </svg>
               arbon
             </span>
