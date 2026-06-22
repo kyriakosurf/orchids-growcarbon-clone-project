@@ -1,3 +1,7 @@
+"use client";
+
+import React, { useState } from "react";
+
 const TEXTURE_WORDS = [
   "CSRD", "CRCF", "MRV", "biowaste", "compost", "SOC", "HoReCa", "LCA",
   "EPD", "BioHub", "circular", "regenerative", "soil", "carbon", "organic",
@@ -50,19 +54,24 @@ function CtaRow({
   title,
   desc,
   href,
+  children,
 }: {
   primary?: boolean;
   title: string;
   desc: string;
   href?: string;
+  children?: React.ReactNode;
 }) {
-  const Tag = href ? "a" : "div";
+  const [expanded, setExpanded] = useState(false);
+  const Tag = href ? "a" : "button";
+  const clickHandler = href ? {} : { onClick: () => setExpanded(!expanded) };
   return (
     <Tag
       href={href}
       target={href?.startsWith("http") ? "_blank" : undefined}
       rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
-      className={`block w-full border border-[#d4a017]/20 px-6 py-5 transition-all duration-300 ${
+      {...clickHandler}
+      className={`block w-full text-left border border-[#d4a017]/20 px-6 py-5 transition-all duration-300 ${
         primary
           ? "bg-[#d4a017] text-black hover:bg-[#e6b422]"
           : "bg-transparent text-white/80 hover:bg-[#d4a017]/5 hover:border-[#d4a017]/40 hover:text-white"
@@ -78,8 +87,15 @@ function CtaRow({
             {desc}
           </p>
         </div>
-        <span className={`shrink-0 text-lg ${primary ? "text-black" : "text-[#d4a017]/50"}`}>→</span>
+        <span className={`shrink-0 text-lg transition-transform duration-300 ${primary ? "text-black" : "text-[#d4a017]/50"} ${expanded ? "rotate-180" : ""}`}>
+          {primary ? "↓" : "→"}
+        </span>
       </div>
+      {expanded && children && (
+        <div className="mt-4 pt-4 border-t border-[#d4a017]/30 text-sm text-black/70 leading-relaxed">
+          {children}
+        </div>
+      )}
     </Tag>
   );
 }
@@ -109,7 +125,19 @@ export default function GrowCarbonLanding() {
             primary
             title="For organic waste producers"
             desc="Close the loop. Verified. Low carbon footprint."
-          />
+          >
+            <p>
+              Grow Carbon partners with hotels, municipalities, and
+              agro-industrial facilities to divert organic waste from
+              landfill. Our BioHubs process source-separated organics
+              into certified compost and generate verified carbon
+              avoidance data — auditable under CSRD and CRCF frameworks.
+              Low-carbon, compliant, and traceable from bin to soil.
+            </p>
+            <p className="mt-3 text-black/50 text-xs uppercase tracking-[0.1em]">
+              Contact us for a feedstock assessment →
+            </p>
+          </CtaRow>
           <CtaRow
             title="For facility partners"
             desc="Join the Propco network. Compliance relief. Shared upside."
