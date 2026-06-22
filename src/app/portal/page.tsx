@@ -16,7 +16,6 @@ import {
   Phone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const MaterialGraph = () => {
   return (
@@ -144,11 +143,6 @@ export default function PortalPage() {
                </div>
              </div>
           </div>
-          <Link href="/">
-            <Button variant="outline" className="border-white/10 text-white/50 hover:text-white text-[10px] font-bold uppercase tracking-widest px-6 h-10">
-              Home
-            </Button>
-          </Link>
           <a href="mailto:info@growcarbon.eu">
             <Button className="h-10 rounded bg-white text-[10px] font-bold uppercase tracking-widest hover:bg-green-500 text-black px-8 transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]">
               Partner With Us
