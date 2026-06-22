@@ -197,34 +197,8 @@ export default function PortalPage() {
               </div>
             </div>
 
-            <div className="relative">
+            <div>
               <MaterialGraph />
-              <div className="absolute -bottom-6 -left-6 lg:p-10 p-4 rounded-2xl bg-zinc-900/90 backdrop-blur border border-white/10 shadow-3xl space-y-6 max-w-[280px]">
-                 <div className="flex items-center gap-3">
-                    <TrendingUp className="w-5 h-5 text-amber-400" />
-                    <span className="text-[10px] font-bold text-white/40 uppercase tracking-[0.2em]">Yield Performance</span>
-                 </div>
-                 <div className="space-y-4">
-                    <div className="space-y-2">
-                       <div className="flex justify-between text-[10px] font-mono text-white/60">
-                          <span>Organic Conversion</span>
-                          <span className="text-amber-400">99.1%</span>
-                       </div>
-                       <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                          <motion.div initial={{ width: 0 }} animate={{ width: "99%" }} transition={{ delay: 1, duration: 1.5 }} className="h-full bg-amber-500" />
-                       </div>
-                    </div>
-                    <div className="space-y-2">
-                       <div className="flex justify-between text-[10px] font-mono text-white/60">
-                          <span>Carbon Purity</span>
-                          <span className="text-amber-400">High-Fidelity</span>
-                       </div>
-                       <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                          <motion.div initial={{ width: 0 }} animate={{ width: "94%" }} transition={{ delay: 1.2, duration: 1.5 }} className="h-full bg-amber-400" />
-                       </div>
-                    </div>
-                 </div>
-              </div>
             </div>
           </div>
         </section>
