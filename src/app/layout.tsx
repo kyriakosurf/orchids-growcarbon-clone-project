@@ -14,6 +14,14 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "Grow Carbon — Regenerative Industrial Infrastructure",
   description: "Grow Carbon is architecting a decentralized network of organic resource management hubs.",
+  icons: {
+    icon: [
+      {
+        url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="%23d4a017"/><text x="16" y="22" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="18" fill="black">GC</text></svg>',
+        type: 'image/svg+xml',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
