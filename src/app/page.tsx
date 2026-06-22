@@ -14,11 +14,11 @@ import Link from "next/link";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#020202] text-white selection:bg-green-500/30 font-sans selection:text-green-400 overflow-hidden">
+    <div className="min-h-screen bg-[#020202] text-white selection:bg-amber-500/30 font-sans selection:text-amber-400 overflow-hidden">
       {/* Background Effects */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-green-500/5 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/5 blur-[120px] rounded-full" />
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-amber-500/5 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-yellow-500/5 blur-[120px] rounded-full" />
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 contrast-150 mix-blend-overlay" />
       </div>
 
@@ -36,7 +36,7 @@ export default function LandingPage() {
         </div>
         <div className="flex items-center gap-6">
           <Link href="/portal">
-            <Button className="h-10 rounded bg-white text-[10px] font-bold uppercase tracking-widest hover:bg-green-500 text-black px-8 transition-all">
+            <Button className="h-10 rounded bg-white text-[10px] font-bold uppercase tracking-widest hover:bg-amber-400 text-black px-8 transition-all">
               Explore Platform
               <ArrowRight className="w-3 h-3 ml-2" />
             </Button>
@@ -53,9 +53,9 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               className="space-y-12"
             >
-              <div className="inline-flex items-center gap-3 px-5 py-2 rounded bg-green-500/5 border border-green-500/20">
-                <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-[9px] font-black uppercase tracking-[0.25em] text-green-500">Infrastructure Layer Active</span>
+              <div className="inline-flex items-center gap-3 px-5 py-2 rounded bg-amber-500/5 border border-amber-500/20">
+                <div className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
+                <span className="text-[9px] font-black uppercase tracking-[0.25em] text-amber-400">Infrastructure Layer Active</span>
               </div>
 
               <div className="space-y-6">
@@ -75,8 +75,8 @@ export default function LandingPage() {
                   { icon: <ShieldCheck className="w-5 h-5" />, title: "Verifiable Impact", desc: "Wastecloud™ traceability for transparent ESG reporting." },
                   { icon: <Globe2 className="w-5 h-5" />, title: "Global Scale", desc: "Infrastructure designed for planetary resource resilience." }
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors group">
-                    <div className="shrink-0 h-10 w-10 rounded-lg bg-white/5 flex items-center justify-center text-green-500 group-hover:bg-green-500 group-hover:text-black transition-all">
+                  <div key={i} className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-amber-500/30 transition-colors group">
+                    <div className="shrink-0 h-10 w-10 rounded-lg bg-white/5 flex items-center justify-center text-amber-400 group-hover:bg-amber-400 group-hover:text-black transition-all">
                       {item.icon}
                     </div>
                     <div>
@@ -88,7 +88,7 @@ export default function LandingPage() {
               </div>
 
               <Link href="/portal">
-                <Button size="lg" className="h-16 rounded bg-green-600 text-white hover:bg-green-500 transition-all font-bold px-10 group text-[11px] uppercase tracking-widest">
+                <Button size="lg" className="h-16 rounded bg-gradient-to-r from-amber-500 to-yellow-500 text-black hover:from-amber-400 hover:to-yellow-400 transition-all font-bold px-10 group text-[11px] uppercase tracking-widest shadow-[0_0_30px_rgba(217,119,6,0.3)]">
                   Explore the Platform
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -101,13 +101,13 @@ export default function LandingPage() {
               transition={{ delay: 0.2 }}
               className="aspect-square bg-white/5 rounded-3xl border border-white/10 flex flex-col p-12 justify-center relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent" />
               <div className="space-y-8 relative z-10">
                 <div className="space-y-4">
-                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-green-500">Our Mission</span>
+                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-amber-400">Our Mission</span>
                   <h3 className="text-3xl font-bold italic tracking-tighter">Turning organic liability into the foundational asset of the circular economy.</h3>
                 </div>
-                <div className="h-px w-20 bg-green-500" />
+                <div className="h-px w-20 bg-amber-500" />
                 <div className="grid grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <p className="text-3xl font-black">142</p>
@@ -133,7 +133,7 @@ export default function LandingPage() {
               <span className="text-sm font-black tracking-tighter uppercase">Grow Carbon</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
+              <div className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse shadow-[0_0_10px_rgba(217,119,6,0.5)]" />
               <span className="text-[9px] font-black text-white/30 uppercase tracking-[0.4em]">Node-GCRB Status: Nominal</span>
             </div>
             <span className="text-[9px] font-black text-white/10 uppercase tracking-[0.4em]">© 2024 GROW CARBON INFRASTRUCTURE GROUP</span>
