@@ -157,66 +157,46 @@ export default function GrowCarbonLanding() {
         <div className="w-full h-[0.5px] bg-[#d4a017]/30 mb-14" />
 
         {/* SECTION 2 — Editorial Body */}
-        <section className="space-y-6 text-sm md:text-base leading-relaxed text-white/70">
+        <section className="space-y-6 text-sm md:text-base leading-[1.8] text-white/70">
           <p>
-            Grow Carbon is architecting a decentralized network of BioHubs
-            across the Mediterranean basin. Each hub functions as a local
-            organic resource processing node, converting biological waste
-            streams — from municipal organics, agro-industrial residues,
-            and HoReCa value-chain byproducts — into stabilized compost
-            assets and verifiable carbon instruments. The model is
-            asset-light, compliance-forward, and designed for territorial
-            scalability.
+            We are developing <span className="text-[#d4a017] font-medium">BioHubs</span> — a network of <span className="text-[#d4a017] font-medium">regenerative industrial
+            infrastructure</span> built across Greece. Each BioHub is a fully integrated
+            facility: collecting organic waste, processing it into <span className="text-[#d4a017] font-medium">CE-certified
+            compost</span>, and closing the loop by returning nutrients and carbon back
+            to agricultural soil.
           </p>
 
           <p>
-            Every BioHub is equipped with a proprietary digital
-            traceability layer that captures and transmits feedstock
-            provenance, transformation parameters, output composition,
-            and end-use verification. This layer generates auditable
-            data packages aligned with the CSRD, ESRS E2 and E4
-            disclosure requirements, enabling full Life Cycle Assessment
-            (LCA) and Environmental Product Declaration (EPD) readiness
-            for offtakers and corporate partners. For the first time,
-            Scope 3 emissions from organic waste can be measured,
-            reported, and verified at the source.
+            For organic waste producers in hospitality, retail and food — we
+            offer <span className="text-[#d4a017] font-medium">verified organic waste management</span> under the strictest
+            traceability technology available. Treatment protocols designed for
+            the <span className="text-[#d4a017] font-medium">lowest carbon footprint</span>, with full chain-of-custody documentation
+            from collection point to final compost application.
           </p>
 
           <p>
-            Beyond compliance, BioHubs generate verified carbon removal
-            and emission avoidance data under the EU Carbon Removal
-            Certification Framework (CRCF). These carbon credits accrue
-            directly to the farmers and land managers who apply the
-            stabilized compost to degraded agricultural soils. The
-            outcome is a measurable increase in Soil Organic Carbon
-            (SOC), improved water retention, reduced synthetic fertilizer
-            dependency, and a documented pathway toward regenerative
-            certification.
+            End-to-end traceability from <span className="text-[#d4a017] font-medium">waste production</span> to <span className="text-[#d4a017] font-medium">compost application</span>.
+            Every tonne we process is tracked, verified, and reported — giving
+            our clients the verified data they need for <span className="text-[#d4a017] font-medium">CSRD</span> and <span className="text-[#d4a017] font-medium">ESRS ES/E3</span>
+            compliance, <span className="text-[#d4a017] font-medium">Life Cycle Assessments</span>, and <span className="text-[#d4a017] font-medium">Environmental Product
+            Declarations</span>. The full emissions picture, from source to soil.
           </p>
 
           <p>
-            The broader regulatory environment supports this transition.
-            The CSRD obligates 50,000+ companies in the EU to report on
-            environmental impacts, creating a compliance-driven demand
-            for verifiable waste diversion and carbon sequestration data.
-            The CRCF establishes a Union-wide certification framework for
-            carbon removals, while the EU Fertilising Products Regulation
-            (FPR) enables CE-marked organic fertilizers and soil improvers
-            to access the Single Market. The EU Soil Monitoring Directive
-            will further require member states to track and report soil
-            health indicators, making BioHub-supplied compost a measurable
-            contributor to national restoration targets. Articles 6.2 and
-            6.4 of the Paris Agreement provide the international
-            architecture for trading these verified mitigation outcomes.
+            We are enablers of <span className="text-[#d4a017] font-medium">CO₂ reduction</span> and <span className="text-[#d4a017] font-medium">carbon neutrality</span> across the
+            agriculture, hospitality, retail and food sectors. The carbon credits
+            generated through compost application accrue to the <span className="text-[#d4a017] font-medium">farmer</span>. We assist
+            our partners in navigating the complex obligations of <span className="text-[#d4a017] font-medium">CRCF Regulation
+            (EU) 2024/3012</span> and international verified carbon standards — from
+            <span className="text-[#d4a017] font-medium">MRV</span> methodology to credit issuance and retirement.
           </p>
 
           <p>
-            Grow Carbon is not building a waste company. We are building
-            a regenerative infrastructure layer — a network of physical
-            and digital assets that turns a biological liability into a
-            verifiable climate asset. The endpoint is a distributed,
-            farmer-centric carbon economy, underwritten by soil health
-            and enabled by industrial biology.
+            Our position is built on the regulatory architecture of <span className="text-[#d4a017] font-medium">CSRD, CRCF,
+            EU FPR CE marking</span>, and the <span className="text-[#d4a017] font-medium">EU Soil Monitoring Directive</span> — compliance
+            frameworks that our partners cannot navigate alone. Grow Carbon is
+            the single accountable <span className="text-[#d4a017] font-medium">physical and digital infrastructure layer</span>
+            underneath it all.
           </p>
         </section>
 
