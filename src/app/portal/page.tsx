@@ -315,11 +315,7 @@ export default function PortalPage() {
                       {card.desc}
                     </p>
                   </div>
-                  <div className="pt-6 flex items-center justify-between border-t border-white/5">
-                     <span className="text-[9px] font-black text-white/30 uppercase tracking-widest">Learn More</span>
-                     <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-green-500 transition-colors" />
-                  </div>
-                </div>
+                                  </div>
               </motion.div>
             ))}
           </div>
