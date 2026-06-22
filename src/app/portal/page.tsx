@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { 
-  Globe2, 
+import {
+  Globe2,
   Activity,
   ArrowRight,
   Box,
@@ -13,13 +13,10 @@ import {
   TrendingUp,
   HardDrive,
   MapPin,
-  Phone,
-  LogOut,
-  User
+  Phone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
-import { createClient } from "@/lib/supabase/client";
+import Link from "next/link";
 
 const MaterialGraph = () => {
   return (
@@ -111,24 +108,6 @@ const TECH_STACK = [
 ];
 
 export default function PortalPage() {
-  const [user, setUser] = useState<any>(null);
-  const router = useRouter();
-
-  useEffect(() => {
-    const getUser = async () => {
-      const supabase = createClient();
-      const { data: { user } } = await supabase.auth.getUser();
-      setUser(user);
-    };
-    getUser();
-  }, []);
-
-  const handleSignOut = async () => {
-    const supabase = createClient();
-    await supabase.auth.signOut();
-    router.push("/");
-  };
-
   return (
     <div className="min-h-screen bg-[#020202] text-white selection:bg-green-500/30 font-sans selection:text-green-400">
       {/* UI Shell */}
@@ -154,12 +133,6 @@ export default function PortalPage() {
           </div>
         </div>
         <div className="flex items-center gap-6">
-          {user && (
-            <div className="hidden md:flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-              <User className="w-3 h-3 text-green-500" />
-              <span className="text-[9px] font-black uppercase tracking-widest text-white/60">{user.email}</span>
-            </div>
-          )}
           <div className="hidden xl:flex items-center gap-6 mr-6 border-r border-white/10 pr-6">
              <div className="flex flex-col items-end">
                <span className="text-[9px] font-mono text-white/30 uppercase tracking-widest">Global Carbon Sync</span>
@@ -171,14 +144,11 @@ export default function PortalPage() {
                </div>
              </div>
           </div>
-          <Button 
-            variant="ghost" 
-            onClick={handleSignOut}
-            className="text-[10px] font-bold uppercase tracking-widest text-white/60 hover:text-red-500 hover:bg-red-500/5 px-4 h-10"
-          >
-            <LogOut className="w-3 h-3 mr-2" />
-            System Exit
-          </Button>
+          <Link href="/">
+            <Button variant="outline" className="border-white/10 text-white/50 hover:text-white text-[10px] font-bold uppercase tracking-widest px-6 h-10">
+              Home
+            </Button>
+          </Link>
           <Button className="h-10 rounded bg-white text-[10px] font-bold uppercase tracking-widest hover:bg-green-500 text-black px-8 transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]">
             Partner With Us
           </Button>

@@ -1,68 +1,18 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { 
-  Sprout, 
-  ArrowRight, 
-  ShieldCheck, 
-  Globe2, 
-  Lock,
-  Mail,
-  Zap,
-  Loader2
+import {
+  Sprout,
+  ArrowRight,
+  ShieldCheck,
+  Globe2,
+  Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
-import { createClient } from "@/lib/supabase/client";
+import Link from "next/link";
 
 export default function LandingPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState<{ type: 'error' | 'success', text: string } | null>(null);
-  const router = useRouter();
-  const supabase = createClient();
-
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setMessage(null);
-
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-
-    if (error) {
-      setMessage({ type: 'error', text: error.message });
-      setLoading(false);
-    } else {
-      router.push("/portal");
-    }
-  };
-
-  const handleResetPassword = async () => {
-    if (!email) {
-      setMessage({ type: 'error', text: "Please enter your email identifier to reset sync." });
-      return;
-    }
-
-    setLoading(true);
-    setMessage(null);
-
-    const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/auth/callback?next=/portal`,
-    });
-
-    if (error) {
-      setMessage({ type: 'error', text: error.message });
-    } else {
-      setMessage({ type: 'success', text: "Reset instructions sent to your email." });
-    }
-    setLoading(false);
-  };
-
   return (
     <div className="min-h-screen bg-[#020202] text-white selection:bg-green-500/30 font-sans selection:text-green-400 overflow-hidden">
       {/* Background Effects */}
@@ -73,45 +23,53 @@ export default function LandingPage() {
       </div>
 
       {/* Grid Pattern */}
-      <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.03]" 
+      <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.03]"
            style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "40px 40px" }} />
 
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 py-24">
-        <div className="max-w-4xl w-full space-y-24">
-          
-          {/* Header/Logo */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex flex-col items-center gap-6"
-          >
-            <div className="h-16 w-16 rounded-2xl bg-white flex items-center justify-center shadow-[0_0_40px_rgba(255,255,255,0.1)]">
-               <Sprout className="w-8 h-8 text-black" />
-            </div>
-            <div className="text-center space-y-2">
-              <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-green-500">System Gateway</h2>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase">Grow Carbon</h1>
-            </div>
-          </motion.div>
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full z-50 px-8 py-5 flex items-center justify-between border-b border-white/5 bg-black/40 backdrop-blur-3xl">
+        <div className="flex items-center gap-3">
+          <div className="h-9 w-9 rounded bg-white flex items-center justify-center">
+             <Sprout className="w-5 h-5 text-black" />
+          </div>
+          <span className="text-sm font-black tracking-tighter uppercase">Grow Carbon</span>
+        </div>
+        <div className="flex items-center gap-6">
+          <Link href="/portal">
+            <Button className="h-10 rounded bg-white text-[10px] font-bold uppercase tracking-widest hover:bg-green-500 text-black px-8 transition-all">
+              Explore Platform
+              <ArrowRight className="w-3 h-3 ml-2" />
+            </Button>
+          </Link>
+        </div>
+      </nav>
 
-          {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            
-            {/* Project Info */}
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-              className="space-y-10"
+      <main className="relative z-10 pt-32">
+        {/* Hero Section */}
+        <section className="max-w-7xl mx-auto px-6 py-24">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="space-y-12"
             >
+              <div className="inline-flex items-center gap-3 px-5 py-2 rounded bg-green-500/5 border border-green-500/20">
+                <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-[9px] font-black uppercase tracking-[0.25em] text-green-500">Infrastructure Layer Active</span>
+              </div>
+
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold tracking-tight">The Foundation of Industrial Regeneration.</h3>
-                <p className="text-white/50 leading-relaxed text-lg">
+                <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-[0.85]">
+                  The Foundation of<br />
+                  <span className="text-white/40 italic">Industrial</span><br />
+                  Regeneration.
+                </h1>
+                <p className="max-w-2xl text-xl text-white/50 leading-relaxed font-medium">
                   Grow Carbon is architecting a decentralized network of organic resource management hubs. We transform biological liabilities into stabilized assets using hyper-efficient conversion technology and immutable digital traceability.
                 </p>
               </div>
 
-              <div className="grid gap-6">
+              <div className="grid gap-6 max-w-md">
                 {[
                   { icon: <Zap className="w-5 h-5" />, title: "Instant Conversion", desc: "Source-to-asset bio-transformation in record cycles." },
                   { icon: <ShieldCheck className="w-5 h-5" />, title: "Verifiable Impact", desc: "Wastecloud™ traceability for transparent ESG reporting." },
@@ -128,100 +86,59 @@ export default function LandingPage() {
                   </div>
                 ))}
               </div>
+
+              <Link href="/portal">
+                <Button size="lg" className="h-16 rounded bg-green-600 text-white hover:bg-green-500 transition-all font-bold px-10 group text-[11px] uppercase tracking-widest">
+                  Explore the Platform
+                  <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </motion.div>
 
-            {/* Login Section */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
-              className="relative group"
+              transition={{ delay: 0.2 }}
+              className="aspect-square bg-white/5 rounded-3xl border border-white/10 flex flex-col p-12 justify-center relative overflow-hidden"
             >
-              <div className="absolute -inset-4 bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-[32px] blur-2xl opacity-50 group-hover:opacity-100 transition-opacity" />
-              <form onSubmit={handleLogin} className="relative p-10 rounded-[24px] bg-zinc-900/80 backdrop-blur-xl border border-white/10 space-y-8">
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold tracking-tight">Access Portal</h3>
-                  <p className="text-xs text-white/40 uppercase tracking-widest font-black">GROW CARBON IS CURRENTLY AT STEALTH MODE. AUTHORISED ACCESS ONLY.</p>
-                </div>
-
-                {message && (
-                  <div className={`p-3 rounded-lg text-xs font-bold uppercase tracking-wider ${message.type === 'error' ? 'bg-red-500/10 text-red-500 border border-red-500/20' : 'bg-green-500/10 text-green-500 border border-green-500/20'}`}>
-                    {message.text}
-                  </div>
-                )}
-
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent" />
+              <div className="space-y-8 relative z-10">
                 <div className="space-y-4">
+                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-green-500">Our Mission</span>
+                  <h3 className="text-3xl font-bold italic tracking-tighter">Turning organic liability into the foundational asset of the circular economy.</h3>
+                </div>
+                <div className="h-px w-20 bg-green-500" />
+                <div className="grid grid-cols-2 gap-8">
                   <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-white/40 ml-1">Email Identifier</label>
-                    <div className="relative">
-                      <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
-                      <input 
-                        type="email" 
-                        required
-                        placeholder="name@organization.com"
-                        className="w-full h-14 bg-black/50 border border-white/10 rounded-xl pl-12 pr-4 text-sm focus:outline-none focus:border-green-500/50 transition-colors"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
+                    <p className="text-3xl font-black">142</p>
+                    <p className="text-[8px] uppercase tracking-[0.2em] text-white/30 font-bold">Hubs Deployed</p>
                   </div>
-                  
                   <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-white/40 ml-1">Secure Token</label>
-                    <div className="relative">
-                      <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
-                      <input 
-                        type="password" 
-                        required
-                        placeholder="••••••••"
-                        className="w-full h-14 bg-black/50 border border-white/10 rounded-xl pl-12 pr-4 text-sm focus:outline-none focus:border-green-500/50 transition-colors"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                      />
-                    </div>
+                    <p className="text-3xl font-black">8.4M</p>
+                    <p className="text-[8px] uppercase tracking-[0.2em] text-white/30 font-bold">Tons Diverted</p>
                   </div>
                 </div>
-
-                <div className="space-y-4 pt-4">
-                  <Button 
-                    type="submit"
-                    disabled={loading}
-                    className="w-full h-14 bg-white text-black hover:bg-green-500 font-black uppercase tracking-[0.2em] text-[11px] transition-all rounded-xl disabled:opacity-50"
-                  >
-                    {loading ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : "Initialize Session"}
-                    {!loading && <ArrowRight className="w-4 h-4 ml-2" />}
-                  </Button>
-                    <div className="flex justify-center px-2">
-                      <button 
-                        type="button"
-                        onClick={handleResetPassword}
-                        disabled={loading}
-                        className="text-[10px] font-black uppercase tracking-widest text-white/20 hover:text-white transition-colors disabled:opacity-50"
-                      >
-                        Reset Sync
-                      </button>
-                    </div>
-                </div>
-              </form>
+              </div>
             </motion.div>
-
           </div>
+        </section>
 
-          {/* Footer-lite */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-white/5"
-          >
+        {/* Footer */}
+        <footer className="border-t border-white/5 mt-40 py-16 px-8">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex items-center gap-3">
-              <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
+              <div className="h-8 w-8 rounded bg-white flex items-center justify-center">
+                <Sprout className="w-4 h-4 text-black" />
+              </div>
+              <span className="text-sm font-black tracking-tighter uppercase">Grow Carbon</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
               <span className="text-[9px] font-black text-white/30 uppercase tracking-[0.4em]">Node-GCRB Status: Nominal</span>
             </div>
             <span className="text-[9px] font-black text-white/10 uppercase tracking-[0.4em]">© 2024 GROW CARBON INFRASTRUCTURE GROUP</span>
-          </motion.div>
-
-        </div>
+          </div>
+        </footer>
       </main>
     </div>
   );
