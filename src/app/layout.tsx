@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="%23d4a017"/><text x="16" y="22" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="18" fill="black">GC</text></svg>',
+        url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%23060604"/><rect x="8" y="4" width="8" height="8" fill="%23d4a017"/><rect x="0" y="12" width="8" height="8" fill="%23d4a017"/><rect x="8" y="20" width="8" height="8" fill="%23d4a017"/></svg>',
         type: 'image/svg+xml',
       },
     ],
