@@ -1,144 +1,202 @@
-"use client";
+const TEXTURE_WORDS = [
+  "CSRD", "CRCF", "MRV", "biowaste", "compost", "SOC", "HoReCa", "LCA",
+  "EPD", "BioHub", "circular", "regenerative", "soil", "carbon", "organic",
+  "methane", "landfill", "traceability", "waste", "fermentation", "digestate",
+  "pyrolysis", "biochar", "feedstock", "biomass", "nutrients", "humus",
+  "biodiversity", "sequestration", "scope3", "emissions", "esg", "reporting",
+  "compliance", "regulation", "framework", "taxonomy", "transition",
+  "decarbonization", "verification", "audit", "certification", "purity",
+  "yield", "efficiency", "conversion", "stabilization", "hygienization",
+  "maturation", "screening", "blending", "application", "restoration",
+  "resilience", "regeneration", "decomposition", "aerobic", "anaerobic",
+  "microbial", "enzymatic", "hydrolysis", "acidogenesis", "acetogenesis",
+  "methanogenesis", "composting", "vermicompost", "bokashi", "terrapreta",
+  "agroecology", "permaculture", "regenerative", "conservation", "tillage",
+  "covercrop", "rotation", "intercropping", "silvopasture", "agroforestry",
+  "biosolids", "manure", "slurry", "effluent", "leachate", "runoff",
+  "eutrophication", "deadzone", "nitrogen", "phosphorus", "potassium",
+  "micronutrients", "chelates", "mycorrhizae", "rhizobacteria", "trichoderma",
+  "biostimulants", "biofertilizers", "biopesticides", "biocontrol", "IPM",
+  "remediation", "phytoextraction", "phytostabilization", "rhizodegradation",
+  "constructedwetlands", "bufferstrips", "riparian", "watershed", "catchment",
+  "aquifer", "recharge", "infiltration", "percolation", "evapotranspiration",
+];
 
-import React from "react";
-import { motion } from "framer-motion";
-import {
-  Sprout,
-  ArrowRight,
-  ShieldCheck,
-  Globe2,
-  Zap
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-
-export default function LandingPage() {
+function ScrambledTexture() {
+  const chunks: string[] = [];
+  for (let i = 0; i < 180; i++) {
+    const words: string[] = [];
+    for (let j = 0; j < 20; j++) {
+      words.push(TEXTURE_WORDS[Math.floor(Math.random() * TEXTURE_WORDS.length)]);
+    }
+    chunks.push(words.join(" "));
+  }
   return (
-    <div className="min-h-screen bg-[#020202] text-white selection:bg-amber-500/30 font-sans selection:text-amber-400 overflow-hidden">
-      {/* Background Effects */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-amber-500/5 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-yellow-500/5 blur-[120px] rounded-full" />
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 contrast-150 mix-blend-overlay" />
+    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none select-none">
+      <div className="absolute inset-0 flex flex-wrap gap-x-4 gap-y-0 py-4 px-4 opacity-[0.07]"
+        style={{ transform: "rotate(-3deg) scale(1.2)" }}>
+        {chunks.map((chunk, i) => (
+          <span key={i} className="text-[7px] leading-[1.4] text-[#d4a017] font-medium whitespace-nowrap">
+            {chunk}&nbsp;
+          </span>
+        ))}
       </div>
+    </div>
+  );
+}
 
-      {/* Grid Pattern */}
-      <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.03]"
-           style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "40px 40px" }} />
-
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 px-8 py-5 flex items-center justify-between border-b border-white/5 bg-black/40 backdrop-blur-3xl">
-        <div className="flex items-center gap-3">
-          <div className="h-9 w-9 rounded bg-white flex items-center justify-center">
-             <Sprout className="w-5 h-5 text-black" />
-          </div>
-          <span className="text-sm font-black tracking-tighter uppercase">Grow Carbon</span>
+function CtaRow({
+  primary,
+  title,
+  desc,
+  href,
+}: {
+  primary?: boolean;
+  title: string;
+  desc: string;
+  href?: string;
+}) {
+  const Tag = href ? "a" : "div";
+  return (
+    <Tag
+      href={href}
+      target={href?.startsWith("http") ? "_blank" : undefined}
+      rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
+      className={`block w-full border border-[#d4a017]/20 px-6 py-5 transition-all duration-300 ${
+        primary
+          ? "bg-[#d4a017] text-black hover:bg-[#e6b422]"
+          : "bg-transparent text-white/80 hover:bg-[#d4a017]/5 hover:border-[#d4a017]/40 hover:text-white"
+      }`}
+      style={{ borderWidth: "0.5px" }}
+    >
+      <div className="flex items-center justify-between gap-4">
+        <div className="space-y-1">
+          <p className={`text-xs uppercase tracking-[0.15em] font-medium ${primary ? "text-black/70" : "text-[#d4a017]/70"}`}>
+            {title}
+          </p>
+          <p className={`text-sm leading-relaxed ${primary ? "text-black/90" : "text-white/50"}`}>
+            {desc}
+          </p>
         </div>
-        <div className="flex items-center gap-6">
-          <Link href="/portal">
-            <Button className="h-10 rounded bg-white text-[10px] font-bold uppercase tracking-widest hover:bg-amber-400 text-black px-8 transition-all">
-              Explore Platform
-              <ArrowRight className="w-3 h-3 ml-2" />
-            </Button>
-          </Link>
+        <span className={`shrink-0 text-lg ${primary ? "text-black" : "text-[#d4a017]/50"}`}>→</span>
+      </div>
+    </Tag>
+  );
+}
+
+export default function GrowCarbonLanding() {
+  return (
+    <div className="min-h-screen bg-[#060604] text-white font-mono relative overflow-hidden">
+      <ScrambledTexture />
+
+      <main className="relative z-10 max-w-3xl mx-auto px-6 py-20 md:py-28">
+        {/* Logo */}
+        <div className="mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+            Grow<span className="text-[#d4a017]">Carbon</span>
+          </h1>
+          <p className="text-[10px] uppercase tracking-[0.3em] text-[#d4a017] font-medium mt-3">
+            Regenerative Industrial Infrastructure · Greece
+          </p>
         </div>
-      </nav>
 
-      <main className="relative z-10 pt-32">
-        {/* Hero Section */}
-        <section className="max-w-7xl mx-auto px-6 py-24">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="space-y-12"
-            >
-              <div className="inline-flex items-center gap-3 px-5 py-2 rounded bg-amber-500/5 border border-amber-500/20">
-                <div className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
-                <span className="text-[9px] font-black uppercase tracking-[0.25em] text-amber-400">Infrastructure Layer Active</span>
-              </div>
+        {/* Divider */}
+        <div className="w-full h-[0.5px] bg-[#d4a017]/30 mb-14" />
 
-              <div className="space-y-6">
-                <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-[0.85]">
-                  The Foundation of<br />
-                  <span className="text-white/40 italic">Industrial</span><br />
-                  Regeneration.
-                </h1>
-                <p className="max-w-2xl text-xl text-white/50 leading-relaxed font-medium">
-                  Grow Carbon is architecting a decentralized network of organic resource management hubs. We transform biological liabilities into stabilized assets using hyper-efficient conversion technology and immutable digital traceability.
-                </p>
-              </div>
+        {/* SECTION 1 — CTA Rows */}
+        <section className="space-y-3 mb-20">
+          <CtaRow
+            primary
+            title="For organic waste producers"
+            desc="Close the loop. Verified. Low carbon footprint."
+          />
+          <CtaRow
+            title="For facility partners"
+            desc="Join the Propco network. Compliance relief. Shared upside."
+          />
+          <CtaRow
+            title="Read the announcement"
+            desc="What we are building and why it matters."
+          />
+          <CtaRow
+            title="Get in touch"
+            desc="hello@growcarbon.eu"
+            href="mailto:hello@growcarbon.eu"
+          />
+        </section>
 
-              <div className="grid gap-6 max-w-md">
-                {[
-                  { icon: <Zap className="w-5 h-5" />, title: "Instant Conversion", desc: "Source-to-asset bio-transformation in record cycles." },
-                  { icon: <ShieldCheck className="w-5 h-5" />, title: "Verifiable Impact", desc: "Wastecloud™ traceability for transparent ESG reporting." },
-                  { icon: <Globe2 className="w-5 h-5" />, title: "Global Scale", desc: "Infrastructure designed for planetary resource resilience." }
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-amber-500/30 transition-colors group">
-                    <div className="shrink-0 h-10 w-10 rounded-lg bg-white/5 flex items-center justify-center text-amber-400 group-hover:bg-amber-400 group-hover:text-black transition-all">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-sm uppercase tracking-wider">{item.title}</h4>
-                      <p className="text-xs text-white/40 mt-1 leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+        {/* Divider */}
+        <div className="w-full h-[0.5px] bg-[#d4a017]/30 mb-14" />
 
-              <Link href="/portal">
-                <Button size="lg" className="h-16 rounded bg-gradient-to-r from-amber-500 to-yellow-500 text-black hover:from-amber-400 hover:to-yellow-400 transition-all font-bold px-10 group text-[11px] uppercase tracking-widest shadow-[0_0_30px_rgba(217,119,6,0.3)]">
-                  Explore the Platform
-                  <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-            </motion.div>
+        {/* SECTION 2 — Editorial Body */}
+        <section className="space-y-6 text-sm md:text-base leading-relaxed text-white/70">
+          <p>
+            Grow Carbon is architecting a decentralized network of BioHubs
+            across the Mediterranean basin. Each hub functions as a local
+            organic resource processing node, converting biological waste
+            streams — from municipal organics, agro-industrial residues,
+            and HoReCa value-chain byproducts — into stabilized compost
+            assets and verifiable carbon instruments. The model is
+            asset-light, compliance-forward, and designed for territorial
+            scalability.
+          </p>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-              className="aspect-square bg-white/5 rounded-3xl border border-white/10 flex flex-col p-12 justify-center relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent" />
-              <div className="space-y-8 relative z-10">
-                <div className="space-y-4">
-                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-amber-400">Our Mission</span>
-                  <h3 className="text-3xl font-bold italic tracking-tighter">Turning organic liability into the foundational asset of the circular economy.</h3>
-                </div>
-                <div className="h-px w-20 bg-amber-500" />
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="space-y-2">
-                    <p className="text-3xl font-black">142</p>
-                    <p className="text-[8px] uppercase tracking-[0.2em] text-white/30 font-bold">Hubs Deployed</p>
-                  </div>
-                  <div className="space-y-2">
-                    <p className="text-3xl font-black">8.4M</p>
-                    <p className="text-[8px] uppercase tracking-[0.2em] text-white/30 font-bold">Tons Diverted</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+          <p>
+            Every BioHub is equipped with a proprietary digital
+            traceability layer that captures and transmits feedstock
+            provenance, transformation parameters, output composition,
+            and end-use verification. This layer generates auditable
+            data packages aligned with the CSRD, ESRS E2 and E4
+            disclosure requirements, enabling full Life Cycle Assessment
+            (LCA) and Environmental Product Declaration (EPD) readiness
+            for offtakers and corporate partners. For the first time,
+            Scope 3 emissions from organic waste can be measured,
+            reported, and verified at the source.
+          </p>
+
+          <p>
+            Beyond compliance, BioHubs generate verified carbon removal
+            and emission avoidance data under the EU Carbon Removal
+            Certification Framework (CRCF). These carbon credits accrue
+            directly to the farmers and land managers who apply the
+            stabilized compost to degraded agricultural soils. The
+            outcome is a measurable increase in Soil Organic Carbon
+            (SOC), improved water retention, reduced synthetic fertilizer
+            dependency, and a documented pathway toward regenerative
+            certification.
+          </p>
+
+          <p>
+            The broader regulatory environment supports this transition.
+            The CSRD obligates 50,000+ companies in the EU to report on
+            environmental impacts, creating a compliance-driven demand
+            for verifiable waste diversion and carbon sequestration data.
+            The CRCF establishes a Union-wide certification framework for
+            carbon removals, while the EU Fertilising Products Regulation
+            (FPR) enables CE-marked organic fertilizers and soil improvers
+            to access the Single Market. The EU Soil Monitoring Directive
+            will further require member states to track and report soil
+            health indicators, making BioHub-supplied compost a measurable
+            contributor to national restoration targets. Articles 6.2 and
+            6.4 of the Paris Agreement provide the international
+            architecture for trading these verified mitigation outcomes.
+          </p>
+
+          <p>
+            Grow Carbon is not building a waste company. We are building
+            a regenerative infrastructure layer — a network of physical
+            and digital assets that turns a biological liability into a
+            verifiable climate asset. The endpoint is a distributed,
+            farmer-centric carbon economy, underwritten by soil health
+            and enabled by industrial biology.
+          </p>
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-white/5 mt-40 py-16 px-8">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded bg-white flex items-center justify-center">
-                <Sprout className="w-4 h-4 text-black" />
-              </div>
-              <span className="text-sm font-black tracking-tighter uppercase">Grow Carbon</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse shadow-[0_0_10px_rgba(217,119,6,0.5)]" />
-              <span className="text-[9px] font-black text-white/30 uppercase tracking-[0.4em]">Node-GCRB Status: Nominal</span>
-            </div>
-            <span className="text-[9px] font-black text-white/10 uppercase tracking-[0.4em]">© 2024 GROW CARBON INFRASTRUCTURE GROUP</span>
-          </div>
-        </footer>
+        <div className="w-full h-[0.5px] bg-[#d4a017]/30 mt-20 mb-10" />
+        <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 text-center font-medium">
+          © 2025 Grow Carbon Infrastructure Group
+        </p>
       </main>
     </div>
   );
