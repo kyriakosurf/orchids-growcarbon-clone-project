@@ -40,7 +40,7 @@ function ScrambledTexture() {
       <div className="absolute inset-0 flex flex-wrap gap-x-4 gap-y-0 py-4 px-4 opacity-[0.07]"
         style={{ transform: "rotate(-3deg) scale(1.2)" }}>
         {chunks.map((chunk, i) => (
-          <span key={i} className="text-[7px] leading-[1.4] text-[#d4a017] font-medium whitespace-nowrap">
+          <span key={i} className="text-[7px] leading-[1.4] text-white font-medium whitespace-nowrap">
             {chunk}&nbsp;
           </span>
         ))}
@@ -111,7 +111,7 @@ export default function GrowCarbonLanding() {
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
             Grow<span className="text-[#d4a017]">Carbon</span>
           </h1>
-          <p className="text-[10px] uppercase tracking-[0.3em] text-[#d4a017] font-medium mt-3">
+          <p className="text-[10px] uppercase tracking-[0.3em] text-white font-medium mt-3">
             Regenerative Industrial Infrastructure · Greece
           </p>
         </div>
@@ -159,43 +159,43 @@ export default function GrowCarbonLanding() {
         {/* SECTION 2 — Editorial Body */}
         <section className="space-y-6 text-sm md:text-base leading-[1.8] text-white/70">
           <p>
-            We are developing <span className="text-[#d4a017] font-medium">BioHubs</span> — a network of <span className="text-[#d4a017] font-medium">regenerative industrial
+            We are developing <span className="text-white font-medium">BioHubs</span> — a network of <span className="text-white font-medium">regenerative industrial
             infrastructure</span> built across Greece. Each BioHub is a fully integrated
-            facility: collecting organic waste, processing it into <span className="text-[#d4a017] font-medium">CE-certified
+            facility: collecting organic waste, processing it into <span className="text-white font-medium">CE-certified
             compost</span>, and closing the loop by returning nutrients and carbon back
             to agricultural soil.
           </p>
 
           <p>
             For organic waste producers in hospitality, retail and food — we
-            offer <span className="text-[#d4a017] font-medium">verified organic waste management</span> under the strictest
+            offer <span className="text-white font-medium">verified organic waste management</span> under the strictest
             traceability technology available. Treatment protocols designed for
-            the <span className="text-[#d4a017] font-medium">lowest carbon footprint</span>, with full chain-of-custody documentation
+            the <span className="text-white font-medium">lowest carbon footprint</span>, with full chain-of-custody documentation
             from collection point to final compost application.
           </p>
 
           <p>
-            End-to-end traceability from <span className="text-[#d4a017] font-medium">waste production</span> to <span className="text-[#d4a017] font-medium">compost application</span>.
+            End-to-end traceability from <span className="text-white font-medium">waste production</span> to <span className="text-white font-medium">compost application</span>.
             Every tonne we process is tracked, verified, and reported — giving
-            our clients the verified data they need for <span className="text-[#d4a017] font-medium">CSRD</span> and <span className="text-[#d4a017] font-medium">ESRS ES/E3</span>
-            compliance, <span className="text-[#d4a017] font-medium">Life Cycle Assessments</span>, and <span className="text-[#d4a017] font-medium">Environmental Product
+            our clients the verified data they need for <span className="text-white font-medium">CSRD</span> and <span className="text-white font-medium">ESRS ES/E3</span>
+            compliance, <span className="text-white font-medium">Life Cycle Assessments</span>, and <span className="text-white font-medium">Environmental Product
             Declarations</span>. The full emissions picture, from source to soil.
           </p>
 
           <p>
-            We are enablers of <span className="text-[#d4a017] font-medium">CO₂ reduction</span> and <span className="text-[#d4a017] font-medium">carbon neutrality</span> across the
+            We are enablers of <span className="text-white font-medium">CO₂ reduction</span> and <span className="text-white font-medium">carbon neutrality</span> across the
             agriculture, hospitality, retail and food sectors. The carbon credits
-            generated through compost application accrue to the <span className="text-[#d4a017] font-medium">farmer</span>. We assist
-            our partners in navigating the complex obligations of <span className="text-[#d4a017] font-medium">CRCF Regulation
+            generated through compost application accrue to the <span className="text-white font-medium">farmer</span>. We assist
+            our partners in navigating the complex obligations of <span className="text-white font-medium">CRCF Regulation
             (EU) 2024/3012</span> and international verified carbon standards — from
-            <span className="text-[#d4a017] font-medium">MRV</span> methodology to credit issuance and retirement.
+            <span className="text-white font-medium">MRV</span> methodology to credit issuance and retirement.
           </p>
 
           <p>
-            Our position is built on the regulatory architecture of <span className="text-[#d4a017] font-medium">CSRD, CRCF,
-            EU FPR CE marking</span>, and the <span className="text-[#d4a017] font-medium">EU Soil Monitoring Directive</span> — compliance
+            Our position is built on the regulatory architecture of <span className="text-white font-medium">CSRD, CRCF,
+            EU FPR CE marking</span>, and the <span className="text-white font-medium">EU Soil Monitoring Directive</span> — compliance
             frameworks that our partners cannot navigate alone. Grow Carbon is
-            the single accountable <span className="text-[#d4a017] font-medium">physical and digital infrastructure layer</span>
+            the single accountable <span className="text-white font-medium">physical and digital infrastructure layer</span>
             underneath it all.
           </p>
         </section>
