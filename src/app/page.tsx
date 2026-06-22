@@ -27,14 +27,19 @@ const TEXTURE_WORDS = [
 ];
 
 function ScrambledTexture() {
-  const chunks: string[] = [];
-  for (let i = 0; i < 180; i++) {
-    const words: string[] = [];
-    for (let j = 0; j < 20; j++) {
-      words.push(TEXTURE_WORDS[Math.floor(Math.random() * TEXTURE_WORDS.length)]);
+  const [chunks, setChunks] = React.useState<string[] | null>(null);
+  React.useEffect(() => {
+    const result: string[] = [];
+    for (let i = 0; i < 180; i++) {
+      const words: string[] = [];
+      for (let j = 0; j < 20; j++) {
+        words.push(TEXTURE_WORDS[Math.floor(Math.random() * TEXTURE_WORDS.length)]);
+      }
+      result.push(words.join(" "));
     }
-    chunks.push(words.join(" "));
-  }
+    setChunks(result);
+  }, []);
+  if (!chunks) return null;
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none select-none">
       <div className="absolute inset-0 flex flex-wrap gap-x-4 gap-y-0 py-4 px-4 opacity-[0.07]"
