@@ -112,13 +112,21 @@ export default function GrowCarbonLanding() {
 
       <main className="relative z-10 max-w-3xl mx-auto px-6 py-20 md:py-28">
         {/* Logo */}
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
-            Grow<span className="text-[#d4a017]">Carbon</span>
-          </h1>
-          <p className="text-[10px] uppercase tracking-[0.3em] text-white font-medium mt-3">
-            Regenerative Industrial Infrastructure
-          </p>
+        <div className="mb-8 flex items-start gap-5">
+          {/* 3-pixel C logo */}
+          <svg width="36" height="48" viewBox="0 0 12 16" className="mt-1 shrink-0" fill="none">
+            <rect x="4" y="0" width="3" height="3" fill="#d4a017" />
+            <rect x="0" y="6" width="3" height="3" fill="#d4a017" />
+            <rect x="4" y="12" width="3" height="3" fill="#d4a017" />
+          </svg>
+          <div>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+              Grow<span className="text-[#d4a017]">Carbon</span>
+            </h1>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-white font-medium mt-3">
+              Regenerative Industrial Infrastructure
+            </p>
+          </div>
         </div>
 
         {/* Divider */}
