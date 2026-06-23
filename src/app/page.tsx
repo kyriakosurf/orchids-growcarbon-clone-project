@@ -113,10 +113,10 @@ export default function GrowCarbonLanding() {
       <main className="relative z-10 max-w-3xl mx-auto px-6 py-20 md:py-28">
         {/* Logo */}
         <div className="mb-8">
-          <h1 className="text-3xl md:text-5xl font-medium tracking-[-0.03em] leading-[0.95]">
-            GROW<span className="text-[#d4a017]"><svg viewBox="0 0 2 3"
-              style={{ display: "inline-block", width: "0.5em", height: "0.9em", verticalAlign: "baseline", marginLeft: "0.1em", marginRight: 0 }}
-              fill="none"><rect x="1" y="0" width="1" height="1" fill="currentColor" /><rect x="0" y="1" width="1" height="1" fill="currentColor" /><rect x="1" y="2" width="1" height="1" fill="currentColor" /></svg>ARBON</span>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+            Grow<span className="text-[#d4a017]"><svg viewBox="0 0 2 3"
+              style={{ display: "inline-block", width: "0.58em", height: "0.7em", verticalAlign: "baseline", marginLeft: "0.12em", marginRight: 0 }}
+              fill="none"><rect x="1" y="0" width="1" height="1" fill="currentColor" /><rect x="0" y="1" width="1" height="1" fill="currentColor" /><rect x="1" y="2" width="1" height="1" fill="currentColor" /></svg>arbon</span>
           </h1>
           <p className="text-[10px] uppercase tracking-[0.3em] text-white font-medium mt-3">
             Regenerative Industrial Infrastructure
