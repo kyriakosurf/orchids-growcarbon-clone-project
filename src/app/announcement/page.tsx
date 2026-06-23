@@ -159,15 +159,15 @@ export default function AnnouncementPage() {
         </div>
 
         {/* Footer */}
-        <div className="mt-12 pt-8 border-t border-[#d4a017]/10">
+        <div className="mt-12 pt-8 border-t border-[#d4a017]/10 text-center">
           <div className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium">
             Mitropoleos 51, 54623 Thessaloniki, Greece
           </div>
           <div className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium mt-2">
-            A <a href="https://mellonlabs.eu" target="_blank" rel="noopener noreferrer" className="text-[#d4a017] hover:text-white transition-colors">Mellon Labs</a> company
+            © 2025 Grow Carbon Infrastructure Group
           </div>
           <div className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium mt-2">
-            © 2025 Grow Carbon Infrastructure Group
+            A <a href="https://mellonlabs.eu" target="_blank" rel="noopener noreferrer" className="text-[#d4a017] hover:text-white transition-colors">Mellon Labs</a> company
           </div>
         </div>
       </main>

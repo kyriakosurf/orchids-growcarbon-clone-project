@@ -213,11 +213,11 @@ export default function GrowCarbonLanding() {
           <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium">
             Mitropoleos 51, 54623 Thessaloniki, Greece
           </p>
-          <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium">
-            A <a href="https://mellonlabs.eu" target="_blank" rel="noopener noreferrer" className="text-[#d4a017] hover:text-white transition-colors">Mellon Labs</a> company
-          </p>
           <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 text-center font-medium pt-2">
             © 2025 Grow Carbon Infrastructure Group
+          </p>
+          <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium">
+            A <a href="https://mellonlabs.eu" target="_blank" rel="noopener noreferrer" className="text-[#d4a017] hover:text-white transition-colors">Mellon Labs</a> company
           </p>
         </div>
       </main>
