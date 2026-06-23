@@ -126,6 +126,52 @@ export default function GrowCarbonLanding() {
         {/* Divider */}
         <div className="w-full h-[0.5px] bg-[#d4a017]/30 mb-14" />
 
+        {/* Intro Text */}
+        <section className="space-y-6 text-sm md:text-base leading-[1.8] text-white/70 mb-14">
+          <p>
+            We are developing <span className="text-white font-medium">BioHubs</span> — a network of{' '}
+            <span className="text-white font-medium">regenerative industrial infrastructure</span> built
+            across Greece. Each BioHub is a fully integrated facility: collecting organic waste, processing
+            it into <span className="text-white font-medium">CE-certified compost</span>, and closing the loop
+            by returning nutrients and carbon back to agricultural soil.
+          </p>
+          <p>
+            For organic waste producers in hospitality, retail and food — we offer{' '}
+            <span className="text-white font-medium">verified organic waste management</span> under the
+            strictest traceability technology available. Treatment protocols designed for the{' '}
+            <span className="text-white font-medium">lowest carbon footprint</span>, with full
+            chain-of-custody documentation from collection point to final compost application.
+          </p>
+          <p>
+            End-to-end traceability from <span className="text-white font-medium">waste production</span>{' '}
+            to <span className="text-white font-medium">compost application</span>. Every tonne we process
+            is tracked, verified, and reported — giving our clients the verified data they need for{' '}
+            <span className="text-white font-medium">CSRD</span> and{' '}
+            <span className="text-white font-medium">ESRS E3 and E5</span> compliance,{' '}
+            <span className="text-white font-medium">Life Cycle Assessments</span>, and{' '}
+            <span className="text-white font-medium">Environmental Product Declarations</span>. The full
+            emissions picture, from source to soil.
+          </p>
+          <p>
+            We are enablers of <span className="text-white font-medium">CO₂ reduction</span> and{' '}
+            <span className="text-white font-medium">carbon neutrality</span> across the agriculture,
+            hospitality, retail and food sectors. The carbon credits generated through compost application
+            accrue to the <span className="text-white font-medium">farmer</span>. We assist our partners in
+            navigating the complex obligations of{' '}
+            <span className="text-white font-medium">CRCF Regulation (EU) 2024/3012</span> and international
+            verified carbon standards — from <span className="text-white font-medium">MRV</span> methodology
+            to credit issuance and retirement.
+          </p>
+          <p>
+            Our position is built on the regulatory architecture of{' '}
+            <span className="text-white font-medium">CSRD, CRCF, EU FPR CE marking</span>, and the{' '}
+            <span className="text-white font-medium">EU Soil Monitoring Directive</span> — compliance
+            frameworks that our partners cannot navigate alone. Grow Carbon is the single accountable{' '}
+            <span className="text-white font-medium">physical and digital infrastructure layer</span>{' '}
+            underneath it all.
+          </p>
+        </section>
+
         {/* SECTION 1 — CTA Rows */}
         <section className="space-y-3 mb-20">
           <CtaRow
@@ -263,6 +309,87 @@ export default function GrowCarbonLanding() {
             href="mailto:hello@growcarbon.eu"
           />
         </section>
+
+        {/* SECTION 2 — Link Sections */}
+        <div className="w-full h-[0.5px] bg-[#d4a017]/30 mb-14" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-14">
+          <div className="space-y-3">
+            <p className="text-[10px] uppercase tracking-[0.15em] text-[#d4a017] font-medium">
+              Company
+            </p>
+            <div className="space-y-1.5">
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                About
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                Careers
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                Press
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                Contact
+              </p>
+            </div>
+          </div>
+          <div className="space-y-3">
+            <p className="text-[10px] uppercase tracking-[0.15em] text-[#d4a017] font-medium">
+              Solutions
+            </p>
+            <div className="space-y-1.5">
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                BioHubs
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                Composting
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                Carbon Credits
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                MRV &amp; Traceability
+              </p>
+            </div>
+          </div>
+          <div className="space-y-3">
+            <p className="text-[10px] uppercase tracking-[0.15em] text-[#d4a017] font-medium">
+              Resources
+            </p>
+            <div className="space-y-1.5">
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                CSRD Guide
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                CRCF Framework
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                FAQ
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                Blog
+              </p>
+            </div>
+          </div>
+          <div className="space-y-3">
+            <p className="text-[10px] uppercase tracking-[0.15em] text-[#d4a017] font-medium">
+              Legal
+            </p>
+            <div className="space-y-1.5">
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                Privacy Policy
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                Terms of Service
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                Cookie Policy
+              </p>
+              <p className="text-xs text-white/40 hover:text-white/70 transition-colors cursor-pointer">
+                Compliance
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* Footer */}
         <div className="w-full h-[0.5px] bg-[#d4a017]/30 mt-20 mb-8" />
