@@ -9,8 +9,17 @@ export default function AnnouncementPage() {
       {/* Top Navigation */}
       <nav className="sticky top-0 z-20 bg-[#060604]/90 backdrop-blur-sm border-b border-[#d4a017]/20">
         <div className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="text-[10px] uppercase tracking-[0.3em] text-[#d4a017] font-medium">
-            Grow<span className="text-white">Carbon</span>
+          <Link href="/" className="text-xs tracking-tight font-bold flex items-center">
+            <span className="text-white">Grow</span>
+            <span className="text-[#d4a017] inline-flex items-center">
+              <svg viewBox="0 0 2 3"
+                style={{ display: "inline-block", width: "0.58em", height: "0.7em", verticalAlign: "baseline", marginLeft: "0.08em", marginRight: 0 }}
+                fill="none">
+                <rect x="1" y="0" width="1" height="1" fill="currentColor" />
+                <rect x="0" y="1" width="1" height="1" fill="currentColor" />
+                <rect x="1" y="2" width="1" height="1" fill="currentColor" />
+              </svg>arbon
+            </span>
           </Link>
           <Link
             href="/"
