@@ -184,7 +184,7 @@ export default function GrowCarbonLanding() {
           <p>
             End-to-end traceability from <span className="text-white font-medium">waste production</span> to <span className="text-white font-medium">compost application</span>.
             Every tonne we process is tracked, verified, and reported — giving
-            our clients the verified data they need for <span className="text-white font-medium">CSRD</span> and <span className="text-white font-medium">ESRS ES/E3</span>
+            our clients the verified data they need for <span className="text-white font-medium">CSRD</span> and <span className="text-white font-medium">ESRS E3 and E5</span>
             compliance, <span className="text-white font-medium">Life Cycle Assessments</span>, and <span className="text-white font-medium">Environmental Product
             Declarations</span>. The full emissions picture, from source to soil.
           </p>
