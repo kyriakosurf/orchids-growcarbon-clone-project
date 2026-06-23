@@ -94,9 +94,6 @@ export default function AnnouncementPage() {
                 We stopped waiting — for regulators to align, for institutions to mobilise, for
                 businesses to discover the will. We decided to act.
               </p>
-              <p className="text-white font-medium">
-                Grow Carbon exists to close the loop.
-              </p>
               <p>
                 We are building a network of distributed industrial infrastructure — BioHubs — that
                 transforms organic waste into certified, life-giving inputs for the soil. This is
