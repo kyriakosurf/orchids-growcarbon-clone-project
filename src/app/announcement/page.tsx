@@ -5,58 +5,44 @@ import Link from "next/link";
 
 export default function AnnouncementPage() {
   return (
-    <div className="min-h-screen bg-[#060604] text-white font-mono relative">
+    <div className="min-h-screen bg-[#060604] text-white font-mono">
       {/* Top Navigation */}
-      <nav className="sticky top-0 z-20 bg-[#060604]/90 backdrop-blur-sm border-b border-[#d4a017]/20">
-        <div className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="text-xs tracking-tight font-bold flex items-center">
-            <span className="text-white">Grow</span>
-            <span className="text-[#d4a017] inline-flex items-center">
-              <svg viewBox="0 0 2 3"
-                style={{ display: "inline-block", width: "0.58em", height: "0.7em", verticalAlign: "baseline", marginLeft: "0.08em", marginRight: 0 }}
-                fill="none">
-                <rect x="1" y="0" width="1" height="1" fill="currentColor" />
-                <rect x="0" y="1" width="1" height="1" fill="currentColor" />
-                <rect x="1" y="2" width="1" height="1" fill="currentColor" />
-              </svg>arbon
-            </span>
+      <nav className="sticky top-0 z-20 bg-[#060604]/90 backdrop-blur-sm">
+        <div className="max-w-3xl mx-auto px-6 h-12 flex items-center justify-between">
+          <Link href="/" className="text-[10px] uppercase tracking-[0.25em] text-white/50 font-medium">
+            Grow Carbon
           </Link>
           <Link
             href="/"
-            className="text-[10px] uppercase tracking-[0.15em] text-white/40 hover:text-[#d4a017] transition-colors"
+            className="text-[10px] uppercase tracking-[0.15em] text-[#d4a017] hover:text-white transition-colors"
           >
-            ← Back
+            Back to main
           </Link>
         </div>
       </nav>
 
-      {/* Reading progress indicator */}
-      <div className="h-[1px] bg-[#d4a017]/20 w-full">
-        <div className="h-full bg-[#d4a017] w-0 transition-all duration-200" id="progress-bar" />
-      </div>
-
-      <main className="max-w-3xl mx-auto px-6 py-16 md:py-24">
+      <main className="max-w-3xl mx-auto px-6 py-20 md:py-28">
         {/* Meta */}
-        <div className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium mb-12">
+        <div className="text-[10px] text-white/30 mb-24">
           Grow Carbon · June 2025
         </div>
 
-        {/* Title */}
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight mb-16">
+        {/* Title — single massive line */}
+        <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-20">
           We are not waiting<br />
-          <span className="text-[#d4a017]">for the future.</span><br />
-          We are growing it.
+          for the future.<br />
+          <span className="text-[#d4a017]">We are growing it.</span>
         </h1>
 
         {/* Body */}
-        <div className="space-y-8 text-sm md:text-base leading-[1.9] text-white/70">
+        <div className="space-y-12 text-base md:text-lg leading-[1.8] text-white/70">
 
           {/* Section: We Are Not Waiting */}
           <div>
-            <h2 className="text-white font-medium text-xs uppercase tracking-[0.1em] mb-6">
+            <h2 className="text-white/40 font-medium text-[10px] uppercase tracking-[0.2em] mb-8">
               We Are Not Waiting
             </h2>
-            <div className="space-y-5">
+            <div className="space-y-6">
               <p>
                 Every year, the world buries hundreds of millions of tonnes of food. It rots in
                 landfills, releasing methane — a greenhouse gas dozens of times more potent than
@@ -80,21 +66,18 @@ export default function AnnouncementPage() {
                 well-intentioned — and they have not delivered the results so many expected. The gap
                 between policy and reality remains wide enough to swallow whole ecosystems.
               </p>
-              <p className="text-white/50 italic">
+              <p className="text-white/40 italic">
                 So we made a decision.
               </p>
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="w-8 h-[1px] bg-[#d4a017]/40 my-12" />
-
           {/* Section: We Have to Ask the Hard Questions */}
           <div>
-            <h2 className="text-white font-medium text-sm uppercase tracking-[0.1em] mb-6">
+            <h2 className="text-white/40 font-medium text-[10px] uppercase tracking-[0.2em] mb-8">
               We Have to Ask the Hard Questions
             </h2>
-            <div className="space-y-5">
+            <div className="space-y-6">
               <p>
                 We believe it is time to start asking, intensely and without flinching: How do we
                 imagine our future? What world are we leaving for the generations who come after us?
@@ -109,20 +92,17 @@ export default function AnnouncementPage() {
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="w-8 h-[1px] bg-[#d4a017]/40 my-12" />
-
           {/* Section: A New Kind of Infrastructure */}
           <div>
-            <h2 className="text-white font-medium text-sm uppercase tracking-[0.1em] mb-6">
+            <h2 className="text-white/40 font-medium text-[10px] uppercase tracking-[0.2em] mb-8">
               A New Kind of Infrastructure
             </h2>
-            <div className="space-y-5">
-              <p className="text-white/50 italic">
+            <div className="space-y-6">
+              <p className="text-white/40 italic">
                 We stopped waiting — for regulators to align, for institutions to mobilise, for
                 businesses to discover the will. We decided to act.
               </p>
-              <p className="text-white font-medium text-base">
+              <p className="text-white font-medium">
                 Grow Carbon exists to close the loop.
               </p>
               <p>
@@ -142,15 +122,12 @@ export default function AnnouncementPage() {
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="w-8 h-[1px] bg-[#d4a017]/40 my-12" />
-
           {/* Section: The Value Was Always There */}
           <div>
-            <h2 className="text-white font-medium text-sm uppercase tracking-[0.1em] mb-6">
+            <h2 className="text-white/40 font-medium text-[10px] uppercase tracking-[0.2em] mb-8">
               The Value Was Always There
             </h2>
-            <div className="space-y-5">
+            <div className="space-y-6">
               <p>
                 The frameworks already point the way. The EU Soil Monitoring and Resilience Directive
                 recognises healthy soil as the foundation it has always been. The Fertilising Products
@@ -173,47 +150,34 @@ export default function AnnouncementPage() {
                 closed loop. We leverage the technological advances that already exist. And where the
                 tools are missing, we build them.
               </p>
-              <p className="text-white/50 italic">
+              <p className="text-white/40 italic">
                 That is the idea. That is the work.
               </p>
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="w-8 h-[1px] bg-[#d4a017]/40 my-12" />
-
-          {/* Closing */}
-          <div className="pt-4">
-            <p className="text-xl md:text-2xl text-white font-bold tracking-tight leading-snug">
-              We are not waiting for the future.<br />
-              <span className="text-[#d4a017]">We are growing it.</span>
-            </p>
-          </div>
-
         </div>
 
         {/* Bottom Navigation */}
-        <div className="mt-20 pt-8 border-t border-[#d4a017]/20">
+        <div className="mt-24 pt-8 border-t border-[#d4a017]/20">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.15em] text-[#d4a017] hover:text-white transition-colors"
+            className="text-[10px] uppercase tracking-[0.15em] text-[#d4a017] hover:text-white transition-colors"
           >
             ← Back to main page
           </Link>
         </div>
 
         {/* Footer */}
-        <div className="mt-16 pt-8 border-t border-[#d4a017]/10">
-          <div className="space-y-3 text-center">
-            <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium">
-              Mitropoleos 51, 54623 Thessaloniki, Greece
-            </p>
-            <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium">
-              A <a href="https://mellonlabs.eu" target="_blank" rel="noopener noreferrer" className="text-[#d4a017] hover:text-white transition-colors">Mellon Labs</a> company
-            </p>
-            <p className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium pt-2">
-              © 2025 Grow Carbon Infrastructure Group
-            </p>
+        <div className="mt-12 pt-8 border-t border-[#d4a017]/10">
+          <div className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium">
+            Mitropoleos 51, 54623 Thessaloniki, Greece
+          </div>
+          <div className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium mt-2">
+            A <a href="https://mellonlabs.eu" target="_blank" rel="noopener noreferrer" className="text-[#d4a017] hover:text-white transition-colors">Mellon Labs</a> company
+          </div>
+          <div className="text-[10px] uppercase tracking-[0.15em] text-white/20 font-medium mt-2">
+            © 2025 Grow Carbon Infrastructure Group
           </div>
         </div>
       </main>
