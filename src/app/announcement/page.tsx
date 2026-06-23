@@ -23,7 +23,7 @@ export default function AnnouncementPage() {
 
       <main className="max-w-3xl mx-auto px-6 py-20 md:py-28">
         {/* Title — single massive line */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-16 md:mb-24">
+        <h1 className="text-3xl md:text-5xl font-normal leading-[1.15] mb-16 md:mb-24 text-white/90">
           We are not waiting<br />
           for the future.<br />
           <span className="text-[#d4a017]">We are growing it.</span>
