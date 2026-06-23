@@ -97,7 +97,7 @@ function CtaRow({
         </span>
       </div>
       {expanded && children && (
-        <div className="mt-4 pt-4 border-t border-[#d4a017]/30 text-sm text-black/70 leading-relaxed">
+        <div className={`mt-4 pt-4 border-t border-[#d4a017]/30 text-sm leading-relaxed ${primary ? "text-black/70" : "text-white/70"}`}>
           {children}
         </div>
       )}
@@ -152,7 +152,52 @@ export default function GrowCarbonLanding() {
           <CtaRow
             title="Read the announcement"
             desc="What we are building and why it matters."
-          />
+          >
+            <div className="space-y-4 text-sm leading-[1.8] text-white/80">
+              <p>
+                We are developing <span className="text-white font-medium">BioHubs</span> — a network of{' '}
+                <span className="text-white font-medium">regenerative industrial infrastructure</span> built
+                across Greece. Each BioHub is a fully integrated facility: collecting organic waste, processing
+                it into <span className="text-white font-medium">CE-certified compost</span>, and closing the loop
+                by returning nutrients and carbon back to agricultural soil.
+              </p>
+              <p>
+                For organic waste producers in hospitality, retail and food — we offer{' '}
+                <span className="text-white font-medium">verified organic waste management</span> under the
+                strictest traceability technology available. Treatment protocols designed for the{' '}
+                <span className="text-white font-medium">lowest carbon footprint</span>, with full
+                chain-of-custody documentation from collection point to final compost application.
+              </p>
+              <p>
+                End-to-end traceability from <span className="text-white font-medium">waste production</span>{' '}
+                to <span className="text-white font-medium">compost application</span>. Every tonne we process
+                is tracked, verified, and reported — giving our clients the verified data they need for{' '}
+                <span className="text-white font-medium">CSRD</span> and{' '}
+                <span className="text-white font-medium">ESRS E3 and E5</span> compliance,{' '}
+                <span className="text-white font-medium">Life Cycle Assessments</span>, and{' '}
+                <span className="text-white font-medium">Environmental Product Declarations</span>. The full
+                emissions picture, from source to soil.
+              </p>
+              <p>
+                We are enablers of <span className="text-white font-medium">CO₂ reduction</span> and{' '}
+                <span className="text-white font-medium">carbon neutrality</span> across the agriculture,
+                hospitality, retail and food sectors. The carbon credits generated through compost application
+                accrue to the <span className="text-white font-medium">farmer</span>. We assist our partners in
+                navigating the complex obligations of{' '}
+                <span className="text-white font-medium">CRCF Regulation (EU) 2024/3012</span> and international
+                verified carbon standards — from <span className="text-white font-medium">MRV</span> methodology
+                to credit issuance and retirement.
+              </p>
+              <p>
+                Our position is built on the regulatory architecture of{' '}
+                <span className="text-white font-medium">CSRD, CRCF, EU FPR CE marking</span>, and the{' '}
+                <span className="text-white font-medium">EU Soil Monitoring Directive</span> — compliance
+                frameworks that our partners cannot navigate alone. Grow Carbon is the single accountable{' '}
+                <span className="text-white font-medium">physical and digital infrastructure layer</span>{' '}
+                underneath it all.
+              </p>
+            </div>
+          </CtaRow>
           <CtaRow
             title="Get in touch"
             desc="hello@growcarbon.eu"
