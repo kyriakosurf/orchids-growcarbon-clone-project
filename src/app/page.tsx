@@ -113,7 +113,7 @@ export default function GrowCarbonLanding() {
       <main className="relative z-10 max-w-3xl mx-auto px-6 py-20 md:py-28">
         {/* Logo */}
         <div className="mb-8">
-          <h1 className="text-4xl md:text-6xl font-medium tracking-[-0.03em] leading-[0.95]">
+          <h1 className="text-3xl md:text-5xl font-medium tracking-[-0.03em] leading-[0.95]">
             GROW<span className="text-[#d4a017]"><svg viewBox="0 0 2 3"
               style={{ display: "inline-block", width: "0.5em", height: "0.9em", verticalAlign: "baseline", marginLeft: "0.1em", marginRight: 0 }}
               fill="none"><rect x="1" y="0" width="1" height="1" fill="currentColor" /><rect x="0" y="1" width="1" height="1" fill="currentColor" /><rect x="1" y="2" width="1" height="1" fill="currentColor" /></svg>ARBON</span>
