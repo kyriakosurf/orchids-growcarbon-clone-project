@@ -9,7 +9,7 @@ export default function AnnouncementPage() {
       {/* Top Navigation */}
       <nav className="sticky top-0 z-20 bg-[#060604]/90 backdrop-blur-sm">
         <div className="max-w-3xl mx-auto px-6 h-12 flex items-center justify-between">
-          <Link href="/" className="text-[10px] uppercase tracking-[0.25em] text-white/50 font-medium">
+          <Link href="/" className="text-[10px] uppercase tracking-[0.25em] text-white/50 font-medium border-b border-transparent hover:border-[#d4a017] transition-all duration-200 hover:text-white">
             Grow Carbon
           </Link>
           <Link
@@ -22,13 +22,8 @@ export default function AnnouncementPage() {
       </nav>
 
       <main className="max-w-3xl mx-auto px-6 py-20 md:py-28">
-        {/* Meta */}
-        <div className="text-[10px] text-white/30 mb-24">
-          Grow Carbon · June 2025
-        </div>
-
         {/* Title — single massive line */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-20">
+        <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-16 md:mb-24">
           We are not waiting<br />
           for the future.<br />
           <span className="text-[#d4a017]">We are growing it.</span>
@@ -39,9 +34,6 @@ export default function AnnouncementPage() {
 
           {/* Section: We Are Not Waiting */}
           <div>
-            <h2 className="text-white/40 font-medium text-[10px] uppercase tracking-[0.2em] mb-8">
-              We Are Not Waiting
-            </h2>
             <div className="space-y-6">
               <p>
                 Every year, the world buries hundreds of millions of tonnes of food. It rots in
@@ -74,7 +66,7 @@ export default function AnnouncementPage() {
 
           {/* Section: We Have to Ask the Hard Questions */}
           <div>
-            <h2 className="text-white/40 font-medium text-[10px] uppercase tracking-[0.2em] mb-8">
+            <h2 className="text-[#d4a017] font-medium text-xs md:text-sm uppercase tracking-[0.2em] mb-8">
               We Have to Ask the Hard Questions
             </h2>
             <div className="space-y-6">
@@ -94,7 +86,7 @@ export default function AnnouncementPage() {
 
           {/* Section: A New Kind of Infrastructure */}
           <div>
-            <h2 className="text-white/40 font-medium text-[10px] uppercase tracking-[0.2em] mb-8">
+            <h2 className="text-[#d4a017] font-medium text-xs md:text-sm uppercase tracking-[0.2em] mb-8">
               A New Kind of Infrastructure
             </h2>
             <div className="space-y-6">
@@ -124,7 +116,7 @@ export default function AnnouncementPage() {
 
           {/* Section: The Value Was Always There */}
           <div>
-            <h2 className="text-white/40 font-medium text-[10px] uppercase tracking-[0.2em] mb-8">
+            <h2 className="text-[#d4a017] font-medium text-xs md:text-sm uppercase tracking-[0.2em] mb-8">
               The Value Was Always There
             </h2>
             <div className="space-y-6">
