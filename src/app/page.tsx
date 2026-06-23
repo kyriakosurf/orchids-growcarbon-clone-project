@@ -184,7 +184,7 @@ export default function GrowCarbonLanding() {
           <p>
             End-to-end traceability from <span className="text-white font-medium">waste production</span> to <span className="text-white font-medium">compost application</span>.
             Every tonne we process is tracked, verified, and reported — giving
-            our clients the verified data they need for <span className="text-white font-medium">CSRD</span> and <span className="text-white font-medium">ESRS E3 and E5</span>
+            our clients the verified data they need for <span className="text-white font-medium">CSRD</span> and <span className="text-white font-medium">ESRS E3 and E5</span>{' '}
             compliance, <span className="text-white font-medium">Life Cycle Assessments</span>, and <span className="text-white font-medium">Environmental Product
             Declarations</span>. The full emissions picture, from source to soil.
           </p>
@@ -194,7 +194,7 @@ export default function GrowCarbonLanding() {
             agriculture, hospitality, retail and food sectors. The carbon credits
             generated through compost application accrue to the <span className="text-white font-medium">farmer</span>. We assist
             our partners in navigating the complex obligations of <span className="text-white font-medium">CRCF Regulation
-            (EU) 2024/3012</span> and international verified carbon standards — from
+            (EU) 2024/3012</span> and international verified carbon standards — from{' '}
             <span className="text-white font-medium">MRV</span> methodology to credit issuance and retirement.
           </p>
 
@@ -202,7 +202,7 @@ export default function GrowCarbonLanding() {
             Our position is built on the regulatory architecture of <span className="text-white font-medium">CSRD, CRCF,
             EU FPR CE marking</span>, and the <span className="text-white font-medium">EU Soil Monitoring Directive</span> — compliance
             frameworks that our partners cannot navigate alone. Grow Carbon is
-            the single accountable <span className="text-white font-medium">physical and digital infrastructure layer</span>
+            the single accountable <span className="text-white font-medium">physical and digital infrastructure layer</span>{' '}
             underneath it all.
           </p>
         </section>
