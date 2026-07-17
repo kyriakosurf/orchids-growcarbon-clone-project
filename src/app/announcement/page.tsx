@@ -1,7 +1,30 @@
-"use client";
-
-import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "We Are Not Waiting — Grow Carbon",
+  description:
+    "Grow Carbon is building a network of BioHubs that transforms organic waste into certified soil inputs — regenerative industrial infrastructure for the future of food and farming.",
+  openGraph: {
+    title: "We Are Not Waiting — Grow Carbon",
+    description:
+      "Grow Carbon is building a network of BioHubs that transforms organic waste into certified soil inputs — regenerative industrial infrastructure for the future of food and farming.",
+    url: "https://growcarbon.eu/announcement",
+    siteName: "Grow Carbon",
+    type: "article",
+    locale: "en_GB",
+    publishedTime: "2025-06-01T00:00:00Z",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "We Are Not Waiting — Grow Carbon",
+    description:
+      "Grow Carbon is building a network of BioHubs that transforms organic waste into certified soil inputs.",
+  },
+  alternates: {
+    canonical: "https://growcarbon.eu/announcement",
+  },
+};
 
 export default function AnnouncementPage() {
   return (
@@ -9,7 +32,7 @@ export default function AnnouncementPage() {
       {/* Top Navigation */}
       <nav className="sticky top-0 z-20 bg-[#060604]/90 backdrop-blur-sm">
         <div className="max-w-3xl mx-auto px-6 h-12 flex items-center justify-between">
-          <Link href="/" className="text-[10px] uppercase tracking-[0.25em] text-white/50 font-medium border-b border-transparent hover:border-[#d4a017] transition-all duration-200 hover:text-white">
+          <Link href="/" className="text-[10px] uppercase tracking-[0.25em] text-white/50 font-medium border-b border-transparent hover:border-[#d4a017] transition-all duration-200 hover:text-white" aria-label="Grow Carbon home">
             Grow Carbon
           </Link>
           <Link
@@ -22,6 +45,36 @@ export default function AnnouncementPage() {
       </nav>
 
       <main className="max-w-3xl mx-auto px-6 py-20 md:py-28">
+        {/* Article structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "@id": "https://growcarbon.eu/announcement/#article",
+              headline: "We Are Not Waiting for the Future. We Are Growing It.",
+              description:
+                "Grow Carbon is building a network of BioHubs that transforms organic waste into certified soil inputs — regenerative industrial infrastructure for the future of food and farming.",
+              datePublished: "2025-06-01",
+              author: {
+                "@type": "Organization",
+                name: "Grow Carbon",
+                url: "https://growcarbon.eu",
+              },
+              publisher: {
+                "@type": "Organization",
+                "@id": "https://growcarbon.eu/#organization",
+                name: "Grow Carbon",
+                logo: "https://growcarbon.eu/favicon.svg",
+              },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://growcarbon.eu/announcement",
+              },
+            }),
+          }}
+        />
         {/* Title — single massive line */}
         <h1 className="text-4xl md:text-7xl font-medium tracking-[-0.03em] leading-[0.95] mb-16 md:mb-24">
           WE ARE NOT<br />
@@ -34,7 +87,7 @@ export default function AnnouncementPage() {
         <div className="space-y-12 text-base md:text-lg leading-[1.8] text-white/70">
 
           {/* Section: We Are Not Waiting */}
-          <div>
+          <section aria-label="We Are Not Waiting">
             <div className="space-y-6">
               <p>
                 Every year, the world buries hundreds of millions of tonnes of food. It rots in
@@ -63,10 +116,10 @@ export default function AnnouncementPage() {
                 So we made a decision.
               </p>
             </div>
-          </div>
+          </section>
 
           {/* Section: We Have to Ask the Hard Questions */}
-          <div>
+          <section aria-label="We Have to Ask the Hard Questions">
             <h2 className="text-[#d4a017] font-medium text-xs md:text-sm uppercase tracking-[0.2em] mb-8">
               We Have to Ask the Hard Questions
             </h2>
@@ -83,10 +136,10 @@ export default function AnnouncementPage() {
                 answer them with action.
               </p>
             </div>
-          </div>
+          </section>
 
           {/* Section: A New Kind of Infrastructure */}
-          <div>
+          <section aria-label="A New Kind of Infrastructure">
             <h2 className="text-[#d4a017] font-medium text-xs md:text-sm uppercase tracking-[0.2em] mb-8">
               A New Kind of Infrastructure
             </h2>
@@ -110,10 +163,10 @@ export default function AnnouncementPage() {
                 value-creating whole.
               </p>
             </div>
-          </div>
+          </section>
 
           {/* Section: The Value Was Always There */}
-          <div>
+          <section aria-label="The Value Was Always There">
             <h2 className="text-[#d4a017] font-medium text-xs md:text-sm uppercase tracking-[0.2em] mb-8">
               The Value Was Always There
             </h2>
@@ -144,7 +197,7 @@ export default function AnnouncementPage() {
                 That is the idea. That is the work.
               </p>
             </div>
-          </div>
+          </section>
 
         </div>
 
